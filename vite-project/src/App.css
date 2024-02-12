@@ -4,7 +4,22 @@
   padding: 2rem;
   text-align: center;
 }
-
+.navbar {
+  font-size: 32px;
+}
+.home {
+  font-size: 25px;
+  text-align: left;
+}
+p {
+  font-size: 26px;
+}
+#HomeHeading1 {
+  text-align: center;
+}
+#HomeHeading2 {
+  text-align: left;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
