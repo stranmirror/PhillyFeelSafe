@@ -43,6 +43,16 @@ const Home = () => {
                are Aahil Afraz, Weihao Li, Zarah Malik, and Daniyal Amjed. 
             </p>
         </div>
+        <div id="Research">
+            <h2>Research</h2>
+            <p>
+                DANIYAL import research here!!!!!!
+                
+
+
+
+            </p>
+        </div>
         </div>
         
     );
