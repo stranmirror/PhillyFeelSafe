@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #6f6060;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,11 +15,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #2909e0;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #00bd03;
 }
 
 body {
@@ -33,7 +33,12 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: #ebc8b9;
 }
+#Research {
+  color: #ebc8b9;
+} 
+
 
 button {
   border-radius: 8px;
@@ -47,7 +52,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #cb1717;
 }
 button:focus,
 button:focus-visible {
@@ -60,7 +65,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #22ce08;
   }
   button {
     background-color: #f9f9f9;
