@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.87);
-  background-color: #6f6060;
+  background-color: #656565;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,11 +15,11 @@
 
 a {
   font-weight: 500;
-  color: #2909e0;
+  color: #910303;
   text-decoration: inherit;
 }
 a:hover {
-  color: #00bd03;
+  color: #000000;
 }
 
 body {
@@ -33,10 +33,10 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  color: #ebc8b9;
+  color: #000000;
 }
 #Research {
-  color: #ebc8b9;
+  color: #0000009c;
 } 
 
 
@@ -52,7 +52,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #cb1717;
+  border-color: #ad0505;
 }
 button:focus,
 button:focus-visible {
