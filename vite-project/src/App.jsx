@@ -1,4 +1,5 @@
 import ReactDOM from "react-dom/client";
+import logo from "./Images/logo.png";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import Navbar from './Navbar';
@@ -8,10 +9,14 @@ import Nopage from './Nopage';
 import Reference from "./reference";
 import Contact from "./contact";
 
+
+
 function App() {
-  return (
-     <BrowserRouter>
-         <Routes>
+    return (
+        <> 
+        <img src={logo} alt="logo" style={{ width: '400px', height: '200px' }} />
+        <BrowserRouter>
+        <Routes>
               <Route path="/" element={<Navbar />}>
                   <Route index element={<Home />} />
                   <Route path="Map" element={<Map />} />
@@ -21,7 +26,9 @@ function App() {
               </Route>
          </Routes>
      </BrowserRouter>
+     </>
   );
+  
 }
 
 export default App;

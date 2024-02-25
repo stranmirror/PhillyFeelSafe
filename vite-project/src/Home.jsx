@@ -1,9 +1,10 @@
+
 const Home = () => {
     return (  
         <div className="home">
         <br></br><br></br><br></br>
             <h2>Homepage</h2>
-        <div id="greeting">
+            <div id="greeting">
             <p>Welcome User! You’ve arrived at the PhillyFeelSafe Website 
                Homepage. Feel free to scroll down and discover our website! 
                You can also click any text on the navigation bar to direct you to 
