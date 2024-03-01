@@ -58,3 +58,12 @@ p {
 .read-the-docs {
   color: #0ede0e;
 }
+
+/* Styleing css code for the map container*/
+/* These Styleing are subject to change*/
+.leaflet-container {
+  height: 100vh;
+  border-style: groove;
+  border-radius: 45px;
+  border-width: 10px;
+}

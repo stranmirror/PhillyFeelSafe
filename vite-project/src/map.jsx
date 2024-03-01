@@ -1,5 +1,7 @@
 import React from "react";
-
+import { MapContainer, TileLayer} from "react-leaflet";
+import "./App.css";
+import "leaflet/dist/leaflet.css";
 
 const Map = () => {
     return (
@@ -28,8 +30,14 @@ Powelton Village:
 Powelton Village is a completely safe place to live and many students live in the area. However, the neighborhood is known for its Victorian homes and historical significance. It's part of University City and has a mix of residential and commercial areas, with a vibrant community benefiting from both local residents and college students. 
             </p>
         </div>
+        <MapContainer center={[39.952237, -75.163626]} zoom={13}>
+           <TileLayer
+           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+           />
+        </MapContainer>
     </div>
     );
-};
+}
 
 export default Map;
