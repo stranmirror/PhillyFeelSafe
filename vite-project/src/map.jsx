@@ -1,7 +1,31 @@
 import React from "react";
-import { MapContainer, TileLayer} from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "./App.css";
 import "leaflet/dist/leaflet.css";
+
+const markers = [
+    {
+        position: [39.986829339542545, -75.21110223998414],
+        popUp: 'West Philadelphia'
+    },
+    {
+        position: [39.92524827111099, -75.17163903260402],
+        popUp: 'South Philadelphia'
+    },
+    {
+        position: [39.964951146087856, -75.19798834216576],
+        popUp: 'Mantua'
+    },
+    {
+        position: [39.950431552151805, -75.2203727251815],
+        popUp: 'Cedar Park'
+    },
+    {
+        position: [39.9609193940143, -75.19265863481958],
+        popUp: 'Powelton Village'
+    }
+    
+    ];
 
 const Map = () => {
     return (
@@ -29,15 +53,21 @@ The Cedar Park neighborhood in Philadelphia is known for its densely urban envir
 Powelton Village:
 Powelton Village is a completely safe place to live and many students live in the area. However, the neighborhood is known for its Victorian homes and historical significance. It's part of University City and has a mix of residential and commercial areas, with a vibrant community benefiting from both local residents and college students. 
             </p>
+
         </div>
         <MapContainer center={[39.952237, -75.163626]} zoom={13}>
            <TileLayer
            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-           />
+           />  
+        {markers.map(marker => (
+            <Marker position={marker.position}>
+                <Popup>{marker.popUp}</Popup>
+            </Marker>
+    ))} 
         </MapContainer>
     </div>
-    );
+    ); 
 }
 
 export default Map;
