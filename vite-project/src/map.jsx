@@ -60,7 +60,7 @@ Powelton Village is a completely safe place to live and many students live in th
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
            />  
         {markers.map(marker => (
-            <Marker position={marker.position}>
+            <Marker  key={marker.popUp} position={marker.position}>
                 <Popup>{marker.popUp}</Popup>
             </Marker>
     ))} 
