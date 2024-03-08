@@ -59,6 +59,10 @@ p {
   color: #0ede0e;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 /* Styleing css code for the map container*/
 /* These Styleing are subject to change*/
 .leaflet-container {

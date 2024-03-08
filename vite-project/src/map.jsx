@@ -35,22 +35,38 @@ const Map = () => {
             <h2>Research</h2>
             <p>
 5 Neighborhoods near University City: <br></br>
-
+<br></br>
 West Philly:
-West Philadelphia is safer than 7 percent of neighborhoods in the United States. Annually, there were 81 violent crimes, 231 property crimes and a total of 312 crimes in West Philadelphia. The annual crimes per 1,000 residents is 21.82 for violent crimes, 62.23 for property crimes and 84.05 for total crimes.
+<br></br>
+According to many trustable sites, West Philadelphia is more safe than 7 percent of neighborhood in the entire United States. 
+West Philadelphia has around 200, 637 residents. There are about 81 violent crime rates, 231 property crime rates, and around 312 crimes in the neighborhood. 
+West Philadelphia does have a higher drug rate at 0.26 compared to other neighborhood in Philadelphia. We would rate it a D.
 <br></br>
 <br></br>
 South Philly:
-South Philadelphia's crime rates are higher than the national average, with violent crimes being 93% above and total crime rates 43% higher. Residents have a 1 in 30 chance of becoming a victim of crime. However, it's safer than 53% of cities in Pennsylvania.
+<br></br>
+South Philly is known to be really dangerous. It is 43% above national average of total crime.
+South Philly is known to be really bad for violent crime. It is 93% worse than the national average of violent crime. 
+Property crime would be at 34% above national average. 1 out of 30 residents have a chance of becoming a victim of crime. 
+It isn’t a very safe neighborhood. We would rate it as an F.
+<br></br>
 <br></br>
 Mantua: 
-Crime and safety in Mantua have been points of concern, with efforts to combat these issues ongoing for decades. Community leaders and organizations have worked tirelessly to improve the area, focusing on projects like the establishment of recreation centers that require a library card for entry, signaling a commitment to education and community engagement. Despite these efforts, the neighborhood has faced challenges related to gang violence and drug-related crime, particularly during the rise of crack cocaine and heroin markets in the 1980s. This led to significant population shifts and changes in the local economy, with many residents moving away and local businesses being replaced by smaller convenience stores​​
+<br></br>
+Mantua has a population of 8,238 people. Mantua is lower than the national average when it comes to assault! 
+When it comes to murder, Mantua is a bit higher than the national average. The national average being 6.1 per 100,000 residents. 
+In Mantua it would be 9. Mantua is somewhat safe. Police are very visible in Mantua as well as very responsive. We would rate it a C-. 
+<br></br>
 <br></br>
 Cedar Park:
-The Cedar Park neighborhood in Philadelphia is known for its densely urban environment, historic homes, and a high degree of walkability. It features a mix of small to large townhomes and apartment complexes, with a significant portion of the population commuting by bicycle, on foot, or by train. The area is notable for its cultural diversity and a high proportion of residents with advanced degrees. 
+<br></br>
+Cedar Park is a very safe place. It has a population of 7,922 people. Cedar Park has very low rates compared to the national average when it comes to assault, murder, rape, robbery, burglary, theft, and motor-vehicle theft. Cedar Park  would be safe compared to many other neighborhoods surrounding University Park. We would rate it a B-.  
+<br></br>
 <br></br>
 Powelton Village:
-Powelton Village is a completely safe place to live and many students live in the area. However, the neighborhood is known for its Victorian homes and historical significance. It's part of University City and has a mix of residential and commercial areas, with a vibrant community benefiting from both local residents and college students. 
+<br></br>
+Powelton Village is a completely safe place to live and many students live in the area. However, the neighborhood is known for its Victorian homes and historical significance. 
+Many student live in Powelton Village. It has a population of 4,236. Powelton is one of the safest places to live in Pennsylvania.  It is a part of University City and has a mix of both local residents and college students. It is very safe. The national average of assault is 282.7 out of 100,000 residents. Powelton Village has 26.8. Burglary, theft, rape, and murder is not be a problem when living here. We would rate Powelton Village a B. 
             </p>
 
         </div>
