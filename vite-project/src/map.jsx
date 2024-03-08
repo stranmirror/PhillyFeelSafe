@@ -76,7 +76,7 @@ Many student live in Powelton Village. It has a population of 4,236. Powelton is
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
            />  
         {markers.map(marker => (
-            <Marker position={marker.position}>
+            <Marker  key={marker.popUp} position={marker.position}>
                 <Popup>{marker.popUp}</Popup>
             </Marker>
     ))} 
