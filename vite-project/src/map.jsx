@@ -23,9 +23,19 @@ const markers = [
     {
         position: [39.9609193940143, -75.19265863481958],
         popUp: 'Powelton Village'
+
+    },
+    
+    {        
+        position: [39.9566, -75.1899],
+        popUp: 'Drexel University'
+
+    
     }
     
     ];
+
+
 
 const Map = () => {
     return (
