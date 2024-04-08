@@ -40,7 +40,7 @@ West Philly:
 <br></br>
 According to many trustable sites, West Philadelphia is more safe than 7 percent of neighborhood in the entire United States. 
 West Philadelphia has around 200, 637 residents. There are about 81 violent crime rates, 231 property crime rates, and around 312 crimes in the neighborhood. 
-West Philadelphia does have a higher drug rate at 0.26 compared to other neighborhood in Philadelphia. We would rate it a D.
+West Philadelphia does have a higher drug rate at 0.26 compared to other neighborhood in Philadelphia. We would give it 1 out of 5 ⭐️'s.
 <br></br>
 <br></br>
 South Philly:
@@ -48,25 +48,25 @@ South Philly:
 South Philly is known to be really dangerous. It is 43% above national average of total crime.
 South Philly is known to be really bad for violent crime. It is 93% worse than the national average of violent crime. 
 Property crime would be at 34% above national average. 1 out of 30 residents have a chance of becoming a victim of crime. 
-It isn’t a very safe neighborhood. We would rate it as an F.
+It isn’t a very safe neighborhood. We would give it 0 out of 5 ⭐️'s.
 <br></br>
 <br></br>
 Mantua: 
 <br></br>
 Mantua has a population of 8,238 people. Mantua is lower than the national average when it comes to assault! 
 When it comes to murder, Mantua is a bit higher than the national average. The national average being 6.1 per 100,000 residents. 
-In Mantua it would be 9. Mantua is somewhat safe. Police are very visible in Mantua as well as very responsive. We would rate it a C-. 
+In Mantua it would be 9. Mantua is somewhat safe. Police are very visible in Mantua as well as very responsive. We would give it 3 out of 5 ⭐️'s. 
 <br></br>
 <br></br>
 Cedar Park:
 <br></br>
-Cedar Park is a very safe place. It has a population of 7,922 people. Cedar Park has very low rates compared to the national average when it comes to assault, murder, rape, robbery, burglary, theft, and motor-vehicle theft. Cedar Park  would be safe compared to many other neighborhoods surrounding University Park. We would rate it a B-.  
+Cedar Park is a very safe place. It has a population of 7,922 people. Cedar Park has very low rates compared to the national average when it comes to assault, murder, rape, robbery, burglary, theft, and motor-vehicle theft. Cedar Park  would be safe compared to many other neighborhoods surrounding University Park. We would give it 4 out of 5 ⭐️'s.  
 <br></br>
 <br></br>
 Powelton Village:
 <br></br>
 Powelton Village is a completely safe place to live and many students live in the area. However, the neighborhood is known for its Victorian homes and historical significance. 
-Many student live in Powelton Village. It has a population of 4,236. Powelton is one of the safest places to live in Pennsylvania.  It is a part of University City and has a mix of both local residents and college students. It is very safe. The national average of assault is 282.7 out of 100,000 residents. Powelton Village has 26.8. Burglary, theft, rape, and murder is not be a problem when living here. We would rate Powelton Village a B. 
+Many student live in Powelton Village. It has a population of 4,236. Powelton is one of the safest places to live in Pennsylvania.  It is a part of University City and has a mix of both local residents and college students. It is very safe. The national average of assault is 282.7 out of 100,000 residents. Powelton Village has 26.8. Burglary, theft, rape, and murder is not be a problem when living here. We would rate Powelton Village 5 out of 5 ⭐️'s. 
             </p>
 
         </div>
@@ -86,3 +86,4 @@ Many student live in Powelton Village. It has a population of 4,236. Powelton is
 }
 
 export default Map;
+
