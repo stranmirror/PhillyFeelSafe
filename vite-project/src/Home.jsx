@@ -2,18 +2,19 @@
 const Home = () => {
     return (  
         <div className="home">
-        <br></br><br></br><br></br>
-            <h2>Homepage</h2>
+            <p className="left-text">Homepage</p>
+            <span className="welcoming-message">Message from the Developer Team:</span>
             <div id="greeting">
             <p>Welcome User! You’ve arrived at the PhillyFeelSafe Website 
                Homepage. Feel free to scroll down and discover our website! 
                You can also click any text on the navigation bar to direct you to 
                your preferred webpage destination. For any question or suggestions, 
-               don't hesitate to click on "Contact Us" in the navigation bar.
+               don't hesitate to click on "Contact Us" in the navigation bar icon.
             </p>
         </div>  
         <div id="HomeHeading1">
             <h2>Explore Our Interactive Map:</h2>
+            <a href="/map">Click me!</a>
         </div>
         <div id="HomeHeading2">
             <h2>How It Works</h2>
@@ -27,15 +28,15 @@ const Home = () => {
                crime history.
             </p>
         </div>
-        <div id="HomeHeading3">
+        <span id="HomeHeading3">
             <h2>Why We Created It</h2>
             <p>The purpose of this website is to serve as a totally free 24-hour guide 
                that helps you feel secure and connected with the local community. Our
                platform aims to provide you with the safest, most reliable, and most 
                convenient tools to achieve this goal.
             </p>
-        </div>
-        <div id="HomeHeading4">
+        </span>
+        <span id="HomeHeading4">
             <h2>About Us</h2>
             <p>We are Drexel CCI students who joined together in this group to develop 
                the PhillyFeelSafe Website. Our team has diverse backgrounds and 
@@ -43,7 +44,7 @@ const Home = () => {
                That is to create this quality platform for the users. The team members 
                are Aahil Afraz, Weihao Li, Zarah Malik, and Daniyal Amjed. 
             </p>
-        </div>
+        </span>
         </div>
         
     );
