@@ -1,7 +1,9 @@
 
+
 const Home = () => {
     return (  
         <div className="home">
+           
             <p className="left-text">Homepage</p>
             <span className="welcoming-message">Message from the Developer Team:</span>
             <div id="greeting">
@@ -47,7 +49,8 @@ const Home = () => {
         </span>
         </div>
         
+        
     );
 }
- 
+
 export default Home;
