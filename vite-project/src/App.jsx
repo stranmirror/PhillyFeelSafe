@@ -1,4 +1,4 @@
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import logo from "./Images/logo.png";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
@@ -8,8 +8,12 @@ import Map from './map';
 import Nopage from './Nopage';
 import Reference from "./reference";
 import Contact from "./contact";
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
+=======
+   
+>>>>>>> 73fbb22c00d6d5ee2f3109fba7fcb24f50319bde
 
 
 function CsvReader() {
@@ -48,7 +52,13 @@ function CsvReader() {
 function App() {
     return (
         <> 
-        <img src={logo} alt="logo" style={{ width: '400px', height: '200px' }} />
+    <div id="title-block">
+        <a href="/">
+        <img src={logo} id="main-icon" alt="logo" style={{ width: '200px', height: '100px' }} />
+        </a>
+{/* wl484: moved title from navbar.jsx into a <span> tag to display the title next to the icon */}
+        <span id="title"> &nbsp; PhillyFeelSafe Website</span>
+    </div>
         <BrowserRouter>
         <Routes>
               <Route path="/" element={<Navbar />}>
