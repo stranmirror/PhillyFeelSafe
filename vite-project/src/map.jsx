@@ -6,15 +6,17 @@ import "leaflet/dist/leaflet.css";
 const markers = [
     {
         position: [39.986829339542545, -75.21110223998414],
-        popUp: 'West Philadelphia'
+        popUp: 'West Philadelphia',
+     
+        description: "According to many trustable sites, West Phildelphia is more safe than 7 percent of neighborhoods in the entire United States. West Philadelphia has around 200-637 residents  There are about 81 violent crime rates, 231 property crime rates, and around 312 crimes in the neighborhood. West Philadelphia does have a higher drug rate at 0.26 compared to other neighborhood in Philadelphia. We would give it 1 out of 5 ⭐️'s"
     },
     {
         position: [39.92524827111099, -75.17163903260402],
-        popUp: 'South Philadelphia'
+        popUp: 'South Philadelphia',
     },
     {
         position: [39.964951146087856, -75.19798834216576],
-        popUp: 'Mantua'
+        popUp: 'Mantua',
     },
     {
         position: [39.950431552151805, -75.2203727251815],
@@ -25,17 +27,12 @@ const markers = [
         popUp: 'Powelton Village'
 
     },
-    
     {        
         position: [39.9566, -75.1899],
         popUp: 'Drexel University'
+    },
 
-    
-    }
-    
     ];
-
-
 
 const Map = () => {
     return (
@@ -87,17 +84,30 @@ Many student live in Powelton Village. It has a population of 4,236. Powelton is
         </div>
         <MapContainer center={[39.952237, -75.163626]} zoom={13}>
            <TileLayer
-           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}"
+                minZoom={0}
+                maxZoom={20}
+                ext="png" // Set the extension for tile images
            />  
         {markers.map(marker => (
             <Marker  key={marker.popUp} position={marker.position}>
-                <Popup>{marker.popUp}</Popup>
+                <Popup>
+                <h1>{marker.popUp}</h1>
+                <p>{marker.description}</p>
+
+                
+                
+                
+                </Popup>
+
             </Marker>
     ))} 
         </MapContainer>
     </div>
     ); 
+
+    
 }
 
 export default Map;
