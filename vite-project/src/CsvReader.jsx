@@ -11,7 +11,7 @@ function CsvReader() {
     const [showData, setShowData] = useState(false);
 
     useEffect(() => {
-        fetch('/src/Data/2023 Data Chart1.csv') // Replace 'path/to/your/file.csv' with the actual path to your CSV file
+        fetch('/src/Data/2023 Data Chart1.csv') 
             .then(response => response.text())
             .then(text => {
                 // Split text by newlines and then by commas to get rows and cells
