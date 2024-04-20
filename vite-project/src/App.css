@@ -140,6 +140,26 @@ h2 {
   border-width: 10px;
 }
 
+.Popup_size {
+  padding: 0px; /* Adjust the padding to change the size of the popup */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-size: 14px; /* Adjust the font size as needed */
+}
+
+
+
+/* CSS styles for the text inside the popup */
+.Popup_size h1 {
+  font-size: 24px; /* Adjust the font size of heading */
+}
+
+.Popup_size p {
+  font-size: 16px; /* Adjust the font size of paragraph */
+}
+
 /* wl484: This section is the styling of the whole side navbar */
 /* wl484: Each parts styling is located under Navbar.css */
 * {

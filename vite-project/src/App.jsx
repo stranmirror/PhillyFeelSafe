@@ -54,7 +54,7 @@ function App() {
         <img src={logo} id="main-icon" alt="logo" style={{ width: '200px', height: '100px' }} />
         </a>
 {/* wl484: moved title from navbar.jsx into a <span> tag to display the title next to the icon */}
-        <span id="title"> &nbsp; PhillyFeelSafe Website</span>
+        <span id="title"> &nbsp; PhillyFeelSafe </span>
     </div>
         <BrowserRouter>
         <Routes>
