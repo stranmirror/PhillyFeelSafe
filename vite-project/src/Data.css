@@ -1,0 +1,31 @@
+/* wl484: this set the style of the content inside the container */
+.SearchBar {
+    background-color: transparent;
+    border:none;
+    height: 100%;
+    font-size: 1.65rem;
+    width: 100%;
+    margin-left: 5px;
+}
+/* wl484: removes the hightlighting when user click on the input field */
+.SearchBar:focus {
+    outline: none;
+}
+/* wl484: this is the block that wrapped the whole searchbar content*/
+.SearchBarContainer {
+    background-color: white;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border-radius: 45px;
+    border: 2px outset;
+    height: 3rem;
+    padding: 0 15px;
+    box-shadow: 0px 0px 8px white;
+    display: flex;
+    align-items: center;
+}
+.SearchIcon {
+    height: 1.85rem;
+    width: auto;
+}
