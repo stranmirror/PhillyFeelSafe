@@ -3,6 +3,8 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "./App.css";
 import "leaflet/dist/leaflet.css";
 
+
+// zfm24 = wrote in pinpoints for map, taking longitude and latitude coordinates from Google Maps, and labeling it within the pop-up
 const markers = [
     {
         position: [39.986829339542545, -75.21110223998414],
@@ -13,29 +15,23 @@ const markers = [
     {
         position: [39.92524827111099, -75.17163903260402],
         popUp: 'South Philadelphia',
-
-        description: "South Philly is known to be really dangerous. It is 43% above national average of total crime. South Philly is known to be really bad for violent crime. It is 93% worse than the national average of violent crime. Property crime would be at 34% above national average. 1 out of 30 residents have a chance of becoming a victim of crime. It is not a very safe neighborhood. We would give it 0 out of 5 ⭐️'s."
     },
     {
         position: [39.964951146087856, -75.19798834216576],
         popUp: 'Mantua',
-
-        description: "Mantua has a population of 8,238 people. Mantua is lower than the national average when it comes to assault! When it comes to murder, Mantua is a bit higher than the national average. The national average being 6.1 per 100,000 residents. In Mantua it would be 9. Mantua is somewhat safe. Police are very visible in Mantua as well as very responsive. We would give it 3 out of 5 ⭐️'s. "
     },
     {
         position: [39.950431552151805, -75.2203727251815],
-        popUp: 'Cedar Park',
-        description: "Cedar Park is a very safe place. It has a population of 7,922 people. Cedar Park has very low rates compared to the national average when it comes to assault, murder, rape, robbery, burglary, theft, and motor-vehicle theft. Cedar Park  would be safe compared to many other neighborhoods surrounding University Park. We would give it 4 out of 5 ⭐️'s.  "
+        popUp: 'Cedar Park'
     },
     {
         position: [39.9609193940143, -75.19265863481958],
-        popUp: 'Powelton Village',
-        description: "Powelton Village is a completely safe place to live and many students live in the area. However, the neighborhood is known for its Victorian homes and historical significance. Many student live in Powelton Village. It has a population of 4,236. Powelton is one of the safest places to live in Pennsylvania.  It is a part of University City and has a mix of both local residents and college students. It is very safe. The national average of assault is 282.7 out of 100,000 residents. Powelton Village has 26.8. Burglary, theft, rape, and murder is not be a problem when living here. We would rate Powelton Village 5 out of 5 ⭐️'s. "
+        popUp: 'Powelton Village'
 
     },
     {        
         position: [39.9566, -75.1899],
-        popUp: 'Drexel University',
+        popUp: 'Drexel University'
     },
 
     ];
@@ -43,7 +39,7 @@ const markers = [
 const Map = () => {
     return (
         <div>
-            <img src= "/Images/logo.png" alt=""/>
+            <img src= "/Images/Website Logo.png" alt=""/>
             <div id="Research">
             <h2>Research</h2>
             <p>
@@ -88,29 +84,30 @@ Many student live in Powelton Village. It has a population of 4,236. Powelton is
             </p>
 
         </div>
+        
         <MapContainer center={[39.952237, -75.163626]} zoom={13}>
+           
            <TileLayer
+           
+                id = 'darktheme'
                 attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}"
                 minZoom={0}
                 maxZoom={20}
                 ext="png" // Set the extension for tile images
-           />  
-        {markers.map(marker => (
-            <Marker  key={marker.popUp} position={marker.position}>
-                <Popup className="Popup_size">
-                <div className="Text_size">
-                <h1>{marker.popUp}</h1>
-                <p>{marker.description}</p>
-                </div>
+                
+           /> 
+          
+                {markers.map(marker => (
+                    <Marker  key={marker.popUp} position={marker.position}>
+                        <Popup>
+                        <h1>{marker.popUp}</h1>
+                        <p>{marker.description}</p>              
+                        </Popup>
 
-                
-                
-                
-                </Popup>
-
-            </Marker>
-    ))} 
+                    </Marker>
+            
+    ))}                   
         </MapContainer>
     </div>
     ); 
