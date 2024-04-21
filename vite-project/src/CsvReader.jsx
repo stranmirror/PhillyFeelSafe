@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import './Data.css';
 import * as BiIcons from 'react-icons/bi';
+import DataMap from './DataMap';
 
 function CsvReader() {
     const [dataRows, setDataRows] = useState([]);
@@ -53,12 +54,17 @@ function CsvReader() {
                 <input 
                     className = "SearchBar"
                     type="text"
-                    placeholder="Search by Location"
+                    placeholder="Search by Block and Street"
                     value={searchTerm}
                     onChange={handleSearchChange}
                 > 
                 </input>
-            </div>
+            </div> 
+            <span>Precise Search Example: 0000 block Philly Ave</span>
+            <br></br>
+            <span>General Search Example: Philly Ave</span>
+            {/* Author: Weihao Li, 4/21/24 - check if condition are meet and if meet display the map*/}
+            {showData && filteredData.length > 0 && <DataMap filteredData={filteredData} />}
             {/* wl484: displays the filtered outputs into table format using rows */}
             <table>
                 <tbody>
