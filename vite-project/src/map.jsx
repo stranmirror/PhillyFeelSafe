@@ -21,16 +21,16 @@ const markers = [
     },
     {
         position: [39.950431552151805, -75.2203727251815],
-        popUp: 'Cedar Park'
+        popUp: 'Cedar Park',
     },
     {
         position: [39.9609193940143, -75.19265863481958],
-        popUp: 'Powelton Village'
+        popUp: 'Powelton Village',
 
     },
     {        
         position: [39.9566, -75.1899],
-        popUp: 'Drexel University'
+        popUp: 'Drexel University',
     },
 
     ];
@@ -90,7 +90,7 @@ function getPosition(position){
 //     }, []);
 //     return location; 
 // };
-
+const { BaseLayer } = LayersControl;
 
 const Map = () => {
     return (
@@ -138,14 +138,7 @@ Powelton Village is a completely safe place to live and many students live in th
 Many student live in Powelton Village. It has a population of 4,236. Powelton is one of the safest places to live in Pennsylvania.  It is a part of University City and has a mix of both local residents and college students. It is very safe. The national average of assault is 282.7 out of 100,000 residents. Powelton Village has 26.8. Burglary, theft, rape, and murder is not be a problem when living here. We would rate Powelton Village 5 out of 5 ⭐️'s. 
 <img src="data:image/png;base64,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" alt="5 out of 5 stars" />
             </p>
-
         </div>
-
-
-
-const { BaseLayer } = LayersControl;
-const Map = () => {
-    return (
         <div>
             <MapContainer center={[39.952237, -75.163626]} zoom={13}>
                 <LayersControl position="topright">
@@ -184,7 +177,8 @@ const Map = () => {
                 ))}
             </MapContainer>
         </div>
+</div>
     ); 
-}
+};
 
 export default Map;    
