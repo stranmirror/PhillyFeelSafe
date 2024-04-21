@@ -24,20 +24,18 @@ const markers = [
     },
     {
         position: [39.950431552151805, -75.2203727251815],
-        popUp: 'Cedar Park'
-
+        popUp: 'Cedar Park',
         description: "Cedar Park is a very safe place. It has a population of 7,922 people. Cedar Park has very low rates compared to the national average when it comes to assault, murder, rape, robbery, burglary, theft, and motor-vehicle theft. Cedar Park  would be safe compared to many other neighborhoods surrounding University Park. We would give it 4 out of 5 ⭐️'s.  "
     },
     {
         position: [39.9609193940143, -75.19265863481958],
-        popUp: 'Powelton Village'
-
+        popUp: 'Powelton Village',
         description: "Powelton Village is a completely safe place to live and many students live in the area. However, the neighborhood is known for its Victorian homes and historical significance. Many student live in Powelton Village. It has a population of 4,236. Powelton is one of the safest places to live in Pennsylvania.  It is a part of University City and has a mix of both local residents and college students. It is very safe. The national average of assault is 282.7 out of 100,000 residents. Powelton Village has 26.8. Burglary, theft, rape, and murder is not be a problem when living here. We would rate Powelton Village 5 out of 5 ⭐️'s. "
 
     },
     {        
         position: [39.9566, -75.1899],
-        popUp: 'Drexel University'
+        popUp: 'Drexel University',
     },
 
     ];
@@ -45,7 +43,7 @@ const markers = [
 const Map = () => {
     return (
         <div>
-            <img src= "/Images/ Logo.png" alt=""/>
+            <img src= "/Images/logo.png" alt=""/>
             <div id="Research">
             <h2>Research</h2>
             <p>
