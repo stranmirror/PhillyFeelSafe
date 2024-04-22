@@ -90,6 +90,9 @@ function getPosition(position){
 //     }, []);
 //     return location; 
 // };
+
+
+// added variable that sets BaseLayer to Layers Control, allowing user to interact with button on map (referenced from ChatGPT)
 const { BaseLayer } = LayersControl;
 
 const Map = () => {
@@ -128,8 +131,9 @@ Powelton Village:
         </div>
         <div>
             <MapContainer center={[39.952237, -75.163626]} zoom={13}>
+{/* zfm24 = added button in corner of map that allows users to switch, LayersControl and BaseLayer tag placed by ChatGPT */}
                 <LayersControl position="topright">
-                    {/* Layer 1 */}
+                    {/* zfm24 = Layer 1 Dark Theme, originally inserted by Aahil */}
                     <BaseLayer checked name="Dark Smooth Tiles">
                         <TileLayer
                             attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -139,7 +143,7 @@ Powelton Village:
                             ext="png"
                         />
                     </BaseLayer>
-                    {/* Layer 2 */}
+                    {/* zfm24 = added Layer 2  Light Theme*/}
                     <BaseLayer name="Smooth Tiles">
                         <TileLayer
                             attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -150,7 +154,7 @@ Powelton Village:
                         />
                     </BaseLayer>
                 </LayersControl>
-                {/* Mapping Markers */}
+                {/* zfm24 = changed markers format, taken by ChatGPT 3 */}
                 {markers.map(marker => (
                     <Marker key={marker.popUp} position={marker.position}>
                         <Popup>
