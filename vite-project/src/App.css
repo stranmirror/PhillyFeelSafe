@@ -148,7 +148,10 @@ h2 {
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   font-size: 14px; /* Adjust the font size as needed */
 }
-
+.DataMap {
+  width: 900px;
+  height: auto;
+}
 
 
 /* CSS styles for the text inside the popup */
