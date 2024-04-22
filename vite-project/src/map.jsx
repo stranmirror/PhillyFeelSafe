@@ -3,7 +3,10 @@ import { MapContainer, TileLayer, Marker, Popup, LayersControl } from "react-lea
 import "./App.css";
 import "leaflet/dist/leaflet.css";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ce364a2bceb8a643dc9e9eed9132948d124de2dc
 // zfm24 = wrote in pinpoints for map, taking longitude and latitude coordinates from Google Maps, and labeling it within the pop-up
 const markers = [
     {
@@ -22,11 +25,21 @@ const markers = [
     },
     {
         position: [39.950431552151805, -75.2203727251815],
-        popUp: 'Cedar Park'
+        popUp: 'Cedar Park',
+<<<<<<< HEAD
+
+        description: "Cedar Park is a very safe place. It has a population of 7,922 people. Cedar Park has very low rates compared to the national average when it comes to assault, murder, rape, robbery, burglary, theft, and motor-vehicle theft. Cedar Park  would be safe compared to many other neighborhoods surrounding University Park. We would give it 4 out of 5 ⭐️'s.  "
+=======
+>>>>>>> 6440de0e4169b56d7abd435a6d11e55de0c9c611
     },
     {
         position: [39.9609193940143, -75.19265863481958],
-        popUp: 'Powelton Village'
+        popUp: 'Powelton Village',
+<<<<<<< HEAD
+
+        description: "Powelton Village is a completely safe place to live and many students live in the area. However, the neighborhood is known for its Victorian homes and historical significance. Many student live in Powelton Village. It has a population of 4,236. Powelton is one of the safest places to live in Pennsylvania.  It is a part of University City and has a mix of both local residents and college students. It is very safe. The national average of assault is 282.7 out of 100,000 residents. Powelton Village has 26.8. Burglary, theft, rape, and murder is not be a problem when living here. We would rate Powelton Village 5 out of 5 ⭐️'s. "
+=======
+>>>>>>> 6440de0e4169b56d7abd435a6d11e55de0c9c611
 
     },
     {        
@@ -36,10 +49,74 @@ const markers = [
 
     ];
 
+<<<<<<< HEAD
 const Map = () => {
     return (
         <div>
             <img src= "/Images/logo.png" alt=""/>
+=======
+
+
+if(!navigator.geolocation) {
+    console.log("Your Browser Does Not Support Live Location Tracking")
+} else {
+    navigator.geolocation.getCurrentPosition(getPosition)
+}
+
+function getPosition(position){
+    // console.log(position)
+    var lat = position.coords.latitude
+    var long = position.coords.longitude
+    var accuracy = position.coords.accuracy
+    console.log("Your coordinate is: Lat: "+ lat + "Long: "+ long + "Accuracy: " + accuracy)
+
+    var marker = L.marker([lat, long]).addTo(Map)
+    var circle = L.circle([lat, long], {radius: accuracy}).addTo(Map)
+
+}
+
+
+// const useGeoLocation = () => {
+//     const [location, setLocation] = useState({
+//         loaded: false, 
+//         coordinates: {lat: "", lng: ""}, 
+//     });
+
+//     const onSuccess = location => {
+//         setLocation({
+//             loaded: true,
+//             coordinates: {
+//                 lat: location.coords.latitude,
+//                 lng: location.coords.longitude,
+//             },
+//         });
+//     };
+
+//     const OnError = error => {
+//         setLocation({
+//             loaded: true,
+//             error,
+//         });
+//     }
+
+//     useEffect(() => {
+//         if(!("geolocation" in navigator)){
+//             onError({
+//                 code: 0,
+//                 message: "Geolocation Not Supported",
+//             });
+//         }
+//         navigator.geolocation.getCurrentPosition(onSuccess, onError);
+//     }, []);
+//     return location; 
+// };
+const { BaseLayer } = LayersControl;
+
+const Map = () => {
+    return (
+        <div>
+            <img src= "/Images/Website Logo.png" alt=""/>
+>>>>>>> ce364a2bceb8a643dc9e9eed9132948d124de2dc
             <div id="Research">
             <h2>Research</h2>
             <p>
@@ -47,6 +124,7 @@ const Map = () => {
 <br></br>
 West Philly:
 <br></br>
+<<<<<<< HEAD
 According to many trustable sites, West Philadelphia is more safe than 7 percent of neighborhood in the entire United States. 
 West Philadelphia has around 200, 637 residents. There are about 81 violent crime rates, 231 property crime rates, and around 312 crimes in the neighborhood. 
 West Philadelphia does have a higher drug rate at 0.26 compared to other neighborhood in Philadelphia. We would give it 1 out of 5 ⭐️'s.
@@ -109,9 +187,71 @@ Many student live in Powelton Village. It has a population of 4,236. Powelton is
     ))} 
         </MapContainer>
     </div>
+=======
+<br></br>
+<img src="https://t4.ftcdn.net/jpg/02/98/16/63/240_F_298166336_4Z8JfBEFGDAWZf625kzvYZz8Cvrm80s3.jpg" alt="1 out of 5 stars" />
+<br></br>
+South Philly:
+<br></br>
+<br></br>
+<img src="https://t4.ftcdn.net/jpg/02/98/16/63/240_F_298166326_gITi0WtGFpaoX5mAv8oQscXIoilpVtm2.jpg" alt="0 out of 5 stars" />
+<br></br>
+Mantua: 
+<br></br>
+<br></br>
+<img src="https://t4.ftcdn.net/jpg/02/98/16/63/240_F_298166352_tlyPez9gIIkUIPe8gX1qQaur42YC5Zjo.jpg" alt="3 out of 5 stars" />
+<br></br>
+Cedar Park:
+<br></br>
+<br></br>
+<img src="https://as2.ftcdn.net/v2/jpg/02/98/16/63/1000_F_298166355_BvfU0450lPRi51CNc2DKaPiEuujvn5Op.jpg" alt="4 out of 5 stars" />
+<br></br>
+Powelton Village:
+<br></br>
+<img src="https://as2.ftcdn.net/v2/jpg/02/98/16/63/1000_F_298166362_yFh1SAtWKKltPWdyIHuXwbHw9vrWC1C1.jpg" alt="5 out of 5 stars" />
+            </p>
+        </div>
+        <div>
+            <MapContainer center={[39.952237, -75.163626]} zoom={13}>
+                <LayersControl position="topright">
+                    {/* Layer 1 */}
+                    <BaseLayer checked name="Dark Smooth Tiles">
+                        <TileLayer
+                            attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                            url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}"
+                            minZoom={0}
+                            maxZoom={20}
+                            ext="png"
+                        />
+                    </BaseLayer>
+                    {/* Layer 2 */}
+                    <BaseLayer name="Smooth Tiles">
+                        <TileLayer
+                            attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                            url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.{ext}"
+                            minZoom={0}
+                            maxZoom={20}
+                            ext="png"
+                        />
+                    </BaseLayer>
+                </LayersControl>
+                {/* Mapping Markers */}
+                {markers.map(marker => (
+                    <Marker key={marker.popUp} position={marker.position}>
+                        <Popup>
+                            <h1>{marker.popUp}</h1>
+                            <p>{marker.description}</p>   
+                            {location.loaded && !location.error && (
+                                <Marker position={[location.coordinates.lat, location.coordinates.lng]}></Marker>
+                            )}             
+                        </Popup>
+                    </Marker>
+                ))}
+            </MapContainer>
+        </div>
+</div>
+>>>>>>> ce364a2bceb8a643dc9e9eed9132948d124de2dc
     ); 
-}
+};
 
 export default Map;    
-
-
