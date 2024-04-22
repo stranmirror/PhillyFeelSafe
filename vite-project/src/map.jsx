@@ -1,5 +1,5 @@
-import React from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import React, { useState, useEffect} from "react";
+import { MapContainer, TileLayer, Marker, Popup, LayersControl } from "react-leaflet";
 import "./App.css";
 import "leaflet/dist/leaflet.css";
 
@@ -31,7 +31,7 @@ const markers = [
     },
     {        
         position: [39.9566, -75.1899],
-        popUp: 'Drexel University'
+        popUp: 'Drexel University',
     },
 
     ];
@@ -39,7 +39,7 @@ const markers = [
 const Map = () => {
     return (
         <div>
-            <img src= "/Images/Website Logo.png" alt=""/>
+            <img src= "/Images/logo.png" alt=""/>
             <div id="Research">
             <h2>Research</h2>
             <p>
@@ -84,36 +84,34 @@ Many student live in Powelton Village. It has a population of 4,236. Powelton is
             </p>
 
         </div>
-        
         <MapContainer center={[39.952237, -75.163626]} zoom={13}>
-           
            <TileLayer
-           
-                id = 'darktheme'
                 attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}"
                 minZoom={0}
                 maxZoom={20}
                 ext="png" // Set the extension for tile images
-                
-           /> 
-          
-                {markers.map(marker => (
-                    <Marker  key={marker.popUp} position={marker.position}>
-                        <Popup>
-                        <h1>{marker.popUp}</h1>
-                        <p>{marker.description}</p>              
-                        </Popup>
+           />  
+        {markers.map(marker => (
+            <Marker  key={marker.popUp} position={marker.position}>
+                <Popup className="Popup_size">
+                <div className="Text_size">
+                <h1>{marker.popUp}</h1>
+                <p>{marker.description}</p>
+                </div>
 
-                    </Marker>
-            
-    ))}                   
+                
+                
+                
+                </Popup>
+
+            </Marker>
+    ))} 
         </MapContainer>
     </div>
     ); 
-
-    
 }
 
-export default Map;
+export default Map;    
+
 
