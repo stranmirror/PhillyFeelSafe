@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup, LayersControl } from "react-lea
 import "./App.css";
 import "leaflet/dist/leaflet.css";
 
+
 // zfm24 = wrote in pinpoints for map, taking longitude and latitude coordinates from Google Maps, and labeling it within the pop-up
 const markers = [
     {
@@ -37,23 +38,25 @@ const markers = [
 
 
 
-if(!navigator.geolocation) {
-    console.log("Your Browser Does Not Support Live Location Tracking")
-} else {
-    navigator.geolocation.getCurrentPosition(getPosition)
-}
 
-function getPosition(position){
-    // console.log(position)
-    var lat = position.coords.latitude
-    var long = position.coords.longitude
-    var accuracy = position.coords.accuracy
-    console.log("Your coordinate is: Lat: "+ lat + "Long: "+ long + "Accuracy: " + accuracy)
+// if(!navigator.geolocation) {
+//     console.log("Your Browser Does Not Support Live Location Tracking")
+// } else {
+//     navigator.geolocation.getCurrentPosition(getPosition)
+// }
 
-    var marker = L.marker([lat, long]).addTo(Map)
-    var circle = L.circle([lat, long], {radius: accuracy}).addTo(Map)
+// function getPosition(position){
+//     // console.log(position)
+//     var lat = position.coords.latitude
+//     var long = position.coords.longitude
+//     var accuracy = position.coords.accuracy
+//     console.log("Your coordinate is: Lat: "+ lat + "Long: "+ long + "Accuracy: " + accuracy)
 
-}
+//     var marker = L.marker([lat, long]).addTo(Map)
+//     var circle = L.circle([lat, long], {radius: accuracy}).addTo(Map)
+
+// }
+
 
 
 // const useGeoLocation = () => {
@@ -92,9 +95,11 @@ function getPosition(position){
 // };
 
 
-// added variable that sets BaseLayer to Layers Control, allowing user to interact with button on map (referenced from ChatGPT)
-const { BaseLayer } = LayersControl;
 
+// added variable that sets BaseLayer to Layers Control, allowing user to interact with button on map (referenced from ChatGPT)
+
+
+const { BaseLayer } = LayersControl;
 const Map = () => {
     return (
         <div>
@@ -130,6 +135,8 @@ Powelton Village:
             </p>
         </div>
         <div>
+        
+        
             <MapContainer center={[39.952237, -75.163626]} zoom={13}>
 {/* zfm24 = added button in corner of map that allows users to switch, LayersControl and BaseLayer tag placed by ChatGPT */}
                 <LayersControl position="topright">
@@ -161,7 +168,7 @@ Powelton Village:
                             <h1>{marker.popUp}</h1>
                             <p>{marker.description}</p>   
                             {location.loaded && !location.error && (
-                                <Marker position={[location.coordinates.lat, location.coordinates.lng]}></Marker>
+                                <Marker x></Marker>
                             )}             
                         </Popup>
                     </Marker>
@@ -170,9 +177,7 @@ Powelton Village:
         </div>
 </div>
     ); 
-};
-
-
+};  
 export default Map;    
 
 
