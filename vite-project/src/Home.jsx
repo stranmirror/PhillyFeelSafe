@@ -4,7 +4,11 @@ const Home = () => {
     return (  
         <div className="home">
            
-            <p className="left-text">Homepage</p>
+           <div className="image-container">
+            {/*da894 = implemented home icon to replace "Homepage"*/}
+           <img src={'src/Images/home_icon.webp'} className="left-text" />
+</div>
+
             <span className="welcoming-message">Message from the Developer Team:</span>
             <div id="greeting">
             <p>Welcome User! You’ve arrived at the PhillyFeelSafe Website 

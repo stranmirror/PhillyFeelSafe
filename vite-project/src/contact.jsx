@@ -39,7 +39,7 @@ const contact = () => {
             <img src={'src/Images/Daniyal.png'} style={{ width: '300px', height: '300px' }} />
         
         </div>
-            <h2>Daniyal Amjed - Crime Information Rater</h2>
+            <h2>Daniyal Amjed - Website Function Developer</h2>
             <h1>Email: da894@drexel.edu</h1>
             <h1><br></br>I am a freshman at Drexel University and my major is Computer Science. I plan to work for one of the leading tech companies of today. </h1>
             
