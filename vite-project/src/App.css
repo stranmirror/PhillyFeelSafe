@@ -38,13 +38,15 @@
   margin: 20px;
 }
 /* wl484: this set the "Homepage" heading */
-.left-text {
-  text-align: left;
-  padding-bottom: 10px;
-  font-size: 60px;
-  color: rgb(214, 75, 75);
-  margin-left: 15px;
+.image-container {
+  text-align: center; /* Horizontal alignment */
 }
+
+.left-text {
+  width: 100px; /* Set the width to make the image bigger */
+  height: 100px; /* Set the height to make the image bigger */
+}
+
 p {
   font-size: 32px;
   text-align: center;
@@ -141,6 +143,7 @@ h2 {
 }
 
 .Popup_size {
+  width: 300 px;
   padding: 0px; /* Adjust the padding to change the size of the popup */
   background-color: #fff;
   border: 1px solid #ccc;
@@ -160,7 +163,7 @@ h2 {
 }
 
 .Popup_size p {
-  font-size: 16px; /* Adjust the font size of paragraph */
+  font-size: 15px; /* Adjust the font size of paragraph */
 }
 
 /* wl484: This section is the styling of the whole side navbar */
