@@ -2,9 +2,6 @@ import React, { useState, useEffect} from "react";
 import { MapContainer, TileLayer, Marker, Popup, LayersControl, useMap} from "react-leaflet";
 import "./App.css";
 import "leaflet/dist/leaflet.css";
-import L from "leaflet";
-import "./geolet.js";
-import { map } from "leaflet";
 
 
 // zfm24 = wrote in pinpoints for map, taking longitude and latitude coordinates from Google Maps, and labeling it within the pop-up
