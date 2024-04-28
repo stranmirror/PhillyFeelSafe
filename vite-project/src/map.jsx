@@ -1,7 +1,10 @@
 import React, { useState, useEffect} from "react";
-import { MapContainer, TileLayer, Marker, Popup, LayersControl } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, LayersControl, useMap} from "react-leaflet";
 import "./App.css";
 import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+import "./geolet.js";
+import { map } from "leaflet";
 
 
 // zfm24 = wrote in pinpoints for map, taking longitude and latitude coordinates from Google Maps, and labeling it within the pop-up
@@ -91,63 +94,10 @@ const markers = [
     }
     ];
 
+    
 
 
 
-// if(!navigator.geolocation) {
-//     console.log("Your Browser Does Not Support Live Location Tracking")
-// } else {
-//     navigator.geolocation.getCurrentPosition(getPosition)
-// }
-
-// function getPosition(position){
-//     // console.log(position)
-//     var lat = position.coords.latitude
-//     var long = position.coords.longitude
-//     var accuracy = position.coords.accuracy
-//     console.log("Your coordinate is: Lat: "+ lat + "Long: "+ long + "Accuracy: " + accuracy)
-
-//     var marker = L.marker([lat, long]).addTo(Map)
-//     var circle = L.circle([lat, long], {radius: accuracy}).addTo(Map)
-
-// }
-
-
-
-// const useGeoLocation = () => {
-//     const [location, setLocation] = useState({
-//         loaded: false, 
-//         coordinates: {lat: "", lng: ""}, 
-//     });
-
-//     const onSuccess = location => {
-//         setLocation({
-//             loaded: true,
-//             coordinates: {
-//                 lat: location.coords.latitude,
-//                 lng: location.coords.longitude,
-//             },
-//         });
-//     };
-
-//     const OnError = error => {
-//         setLocation({
-//             loaded: true,
-//             error,
-//         });
-//     }
-
-//     useEffect(() => {
-//         if(!("geolocation" in navigator)){
-//             onError({
-//                 code: 0,
-//                 message: "Geolocation Not Supported",
-//             });
-//         }
-//         navigator.geolocation.getCurrentPosition(onSuccess, onError);
-//     }, []);
-//     return location; 
-// };
 
 
 
@@ -189,7 +139,9 @@ Powelton Village:
 <img src="https://as2.ftcdn.net/v2/jpg/02/98/16/63/1000_F_298166362_yFh1SAtWKKltPWdyIHuXwbHw9vrWC1C1.jpg" alt="5 out of 5 stars" />
             </p>
         </div>
-        <div>
+        <div id="map">
+        
+
         
         
             <MapContainer center={[39.952237, -75.163626]} zoom={13}>
