@@ -4,14 +4,18 @@ const Home = () => {
     return (  
         <div className="home">
            
-           <div className="image-container">
-            {/*da894 = implemented home icon to replace "Homepage"*/}
-           <img src={'src/Images/home_icon.webp'} className="left-text" />
+           <div class="image-container">
+    <img src="https://cdn0.iconfinder.com/data/icons/modern-ui-glyph-1/64/modern-ui-glyph-1-03-512.png" alt="Image" class="rounded-image" />
 </div>
 
-            <span className="welcoming-message">Message from the Developer Team:</span>
+
+            <span className="welcoming-message">Message from the Developer Team:</span> 
+            <br></br>
+            <br></br>
             <div id="greeting">
-            <p>Welcome User! You’ve arrived at the PhillyFeelSafe Website 
+            
+            <p>
+            Welcome User! You’ve arrived at the PhillyFeelSafe Website 
                Homepage. Feel free to scroll down and discover our website! 
                You can also click any text on the navigation bar to direct you to 
                your preferred webpage destination. For any question or suggestions, 

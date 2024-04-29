@@ -30,21 +30,22 @@
   font-weight: bold;
 }
 #greeting {
-  background-color:dimgray;
-  color:greenyellow;
-  border-style: groove;
+  background-color: rgb(249, 244, 235);
+  color: rgb(28, 32, 49);
+  border: 1px solid rgb(40, 20, 25);
   border-radius: 30px;
   padding: 10px;
-  margin: 20px;
 }
 /* wl484: this set the "Homepage" heading */
 .image-container {
-  text-align: center; /* Horizontal alignment */
+  text-align: center; /* Optional: to center the image */
 }
 
-.left-text {
-  width: 100px; /* Set the width to make the image bigger */
-  height: 100px; /* Set the height to make the image bigger */
+.rounded-image {
+  width: 150px; /* Adjust the width and height as needed */
+  height: 150px;
+  border-radius: 50%; /* Make the image circular */
+  border: 7px solid black; /* Optional: Add a border */
 }
 
 p {
@@ -102,6 +103,19 @@ h2 {
   border-style: groove;
   border-radius: 45cm;
   padding: 5px;
+}
+.map-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 5px;
+    border-color: white;
+    border-style: groove;
+}
+.rounded-image {
+  width: 100px; /* Set your desired width */
+  height: auto; /* Maintain aspect ratio */
 }
 
 
@@ -185,4 +199,13 @@ h2 {
 }
 .ContactHeading4{
   text-align: center 
+}
+.popup-content {
+  position: relative;
+}
+
+.popup-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }

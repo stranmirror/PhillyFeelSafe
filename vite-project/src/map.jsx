@@ -9,9 +9,13 @@ const markers = [
     {
         position: [39.986829339542545, -75.21110223998414],
         popUp: 'West Philadelphia',
-     
-        description: "According to many trustable sites, West Phildelphia is more safe than 7 percent of neighborhoods in the entire United States. West Philadelphia has around 200-637 residents  There are about 81 violent crime rates, 231 property crime rates, and around 312 crimes in the neighborhood. West Philadelphia does have a higher drug rate at 0.26 compared to other neighborhood in Philadelphia. We would give it 1 out of 5 ⭐️'s"
-    },
+        description: 'According to many trustable sites, West Philadelphia is safer than 7 percent of neighborhoods in the entire United States. West Philadelphia has around 200-637 residents. There are about 81 violent crime rates, 231 property crime rates, and around 312 crimes in the neighborhood. West Philadelphia does have a higher drug rate at 0.26 compared to other neighborhoods in Philadelphia. We would give it 1 out of 5 ⭐️\'s. <br> <img src="https://t4.ftcdn.net/jpg/02/98/16/63/240_F_298166336_4Z8JfBEFGDAWZf625kzvYZz8Cvrm80s3.jpg" alt="1 out of 5 stars" />'
+        
+    }
+    
+    
+    
+    ,
     {
         position: [39.92524827111099, -75.17163903260402],
         popUp: 'South Philadelphia',
@@ -113,16 +117,22 @@ const Map = () => {
         <div>
             <img src= "/Images/Website Logo.png" alt=""/>
             <div id="Research">
-            <h2>Research</h2>
+            <h2>
+            <div class="map-image">
+        <img src="https://cdn-icons-png.flaticon.com/512/235/235861.png" alt="Image" class="rounded-image" />
+            </div>
+      
+            </h2>
             <p>
-5 Neighborhoods near University City: <br></br>
 <br></br>
-West Philly:
+Five Neighborhoods near University City: <br></br>
+<br></br>
+West Philadelphia:
 <br></br>
 <br></br>
 <img src="https://t4.ftcdn.net/jpg/02/98/16/63/240_F_298166336_4Z8JfBEFGDAWZf625kzvYZz8Cvrm80s3.jpg" alt="1 out of 5 stars" />
 <br></br>
-South Philly:
+South Philadelphia:
 <br></br>
 <br></br>
 <img src="https://t4.ftcdn.net/jpg/02/98/16/63/240_F_298166326_gITi0WtGFpaoX5mAv8oQscXIoilpVtm2.jpg" alt="0 out of 5 stars" />
