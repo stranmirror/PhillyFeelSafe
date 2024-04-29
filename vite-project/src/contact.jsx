@@ -12,6 +12,7 @@ const contact = () => {
         </div>  
         <br></br>
         <br></br>
+
         <div className="ContactHeading1">
             <img src={'src/Images/Zarah.png'} style={{ width: '300px', height: '300px' }} />
             <h2>Zarah Malik - Product Owner</h2>
@@ -22,6 +23,7 @@ const contact = () => {
             <img src={'src/Images/Weihao.png'} style={{ width: '300px', height: '300px' }} />
         
         </div>
+
         <div className="ContactHeading2">
             <h2>Weihao Li - Website Function Developer</h2>
             <h1>Email: wl484@drexel.edu</h1>
@@ -31,6 +33,7 @@ const contact = () => {
             <img src={'src/Images/Aahil.png'} style={{ width: '300px', height: '300px' }} />
             </div>
         </div>
+
         <div className="ContactHeading3">
             <h2>Aahil Afraz - Website Style Designer</h2>
             <h1>Email: aa4763@drexel.edu</h1>
@@ -40,6 +43,7 @@ const contact = () => {
             <img src={'src/Images/Daniyal.png'} style={{ width: '300px', height: '300px' }} />
             </div>
         </div>
+        
         <div className="ContactHeading4">
             <h2>Daniyal Amjed - Crime Information Rater</h2>
             <h1>Email: da894@drexel.edu</h1>

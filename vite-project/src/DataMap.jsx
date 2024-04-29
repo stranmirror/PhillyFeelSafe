@@ -32,8 +32,6 @@ function DataMap ({ filteredData }) {
                             <div className="Text_size">
                 {/* wl484: replaced column name to column number to fix error*/}
                                 <h3>Location: {data[3]}</h3>
-                                <p>Latitude: {data[5]}</p>
-                                <p>Longitude: {data[6]}</p>
                                 <p>Type of Crime: {data[4]}</p>
                             </div>
                         </Popup>
