@@ -1,8 +1,10 @@
-import React, { useState, useEffect} from "react";
-import { MapContainer, TileLayer, Marker, Popup, LayersControl, useMap} from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, LayersControl } from "react-leaflet";
 import "./App.css";
 import "leaflet/dist/leaflet.css";
-
+import L from "leaflet";
+import Mylocation from "./UserLocation";
+import React, { useState } from 'react';
+import userLocationIconUrl from "./Images/userLocation.png";
 
 // zfm24 = wrote in pinpoints for map, taking longitude and latitude coordinates from Google Maps, and labeling it within the pop-up
 const markers = [
@@ -90,19 +92,25 @@ const markers = [
         description: "As it America's independence began here, this is a safe area to live in Philadelphia. Old City is a very beautiful place with local transit, restuarants, stores, etc. We would give this location 5 out of 5 ⭐️'s."
     }
     ];
-
     
-
-
-
-
-
+    const userLocationIcon = new L.Icon({
+        iconUrl: userLocationIconUrl,
+        iconSize: [38,38],
+    });
 
 // added variable that sets BaseLayer to Layers Control, allowing user to interact with button on map (referenced from ChatGPT)
 
-
 const { BaseLayer } = LayersControl;
 const Map = () => {
+{/* From ChatGPT */}
+{/* Modified by Weihao Li */}
+{/* wl484: state variable to store the fetched user's lat and lng */}
+    const [userLocation, setUserLocation] = useState(null);
+{/* wl484: update and re-render user location*/}
+    const handleUserLocation = (location) => {
+        setUserLocation(location);
+    };
+    
     return (
         <div>
             <img src= "/Images/Website Logo.png" alt=""/>
@@ -136,10 +144,10 @@ Powelton Village:
 <img src="https://as2.ftcdn.net/v2/jpg/02/98/16/63/1000_F_298166362_yFh1SAtWKKltPWdyIHuXwbHw9vrWC1C1.jpg" alt="5 out of 5 stars" />
             </p>
         </div>
-        <div id="map">
-        
-
-        
+{/* wl484: calling the function from UserLocation.jsx */}
+<div>
+    <Mylocation onLocationUpdate={handleUserLocation} />
+</div>
         
             <MapContainer center={[39.952237, -75.163626]} zoom={13}>
 {/* zfm24 = added button in corner of map that allows users to switch, LayersControl and BaseLayer tag placed by ChatGPT */}
@@ -170,16 +178,24 @@ Powelton Village:
                     <Marker key={marker.popUp} position={marker.position}>
                         <Popup className="Popup_size">
                             <h1>{marker.popUp}</h1>
-                            <p>{marker.description}</p>   
-                            {location.loaded && !location.error && (
-                                <Marker x></Marker>
-                            )}             
+                            <p>{marker.description}</p>            
                         </Popup>
                     </Marker>
                 ))}
+                {/* From ChatGPT 4/28/24 */}
+                {/* Modified by Weihao Li */}
+                {/* wl484: using fetched user location to display a new marker on the map */}
+                {userLocation && (
+                    <Marker 
+                    position={[userLocation.latitude, userLocation.longitude]}
+                    icon={userLocationIcon}
+                    >
+                        <Popup> Your Current Location </Popup> 
+                    </Marker> 
+            )}
             </MapContainer>
         </div>
-</div>
+                        
     ); 
 };  
 export default Map;    
