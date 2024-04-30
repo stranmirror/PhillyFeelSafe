@@ -9,10 +9,14 @@ import userLocationIconUrl from "./Images/userLocation.png";
 // zfm24 = wrote in pinpoints for map, taking longitude and latitude coordinates from Google Maps, and labeling it within the pop-up
 const markers = [
     {
+        
         position: [39.986829339542545, -75.21110223998414],
         popUp: 'West Philadelphia',
-        description: 'According to many trustable sites, West Philadelphia is safer than 7 percent of neighborhoods in the entire United States. West Philadelphia has around 200-637 residents. There are about 81 violent crime rates, 231 property crime rates, and around 312 crimes in the neighborhood. West Philadelphia does have a higher drug rate at 0.26 compared to other neighborhoods in Philadelphia. We would give it 1 out of 5 ⭐️\'s. <br> <img src="https://t4.ftcdn.net/jpg/02/98/16/63/240_F_298166336_4Z8JfBEFGDAWZf625kzvYZz8Cvrm80s3.jpg" alt="1 out of 5 stars" />'
+        description: <p>According to many trustable sites, West Philadelphia is safer than 7 percent of neighborhoods in the entire United States. West Philadelphia has around 200-637 residents. There are about 81 violent crime rates, 231 property crime rates, and around 312 crimes in the neighborhood. West Philadelphia does have a higher drug rate at 0.26 compared to other neighborhoods in Philadelphia. We would give it 1 out of 5 ⭐️'s. 
+                     <img src="https://t4.ftcdn.net/jpg/02/98/16/63/240_F_298166336_4Z8JfBEFGDAWZf625kzvYZz8Cvrm80s3.jpg" alt="1 out of 5 stars" />'
+                     </p>
         
+
     }
     
     
@@ -22,25 +26,36 @@ const markers = [
         position: [39.92524827111099, -75.17163903260402],
         popUp: 'South Philadelphia',
 
-        description: "South Philly is known to be really dangerous. It is 43% above national average of total crime. South Philly is known to be really bad for violent crime. It is 93% worse than the national average of violent crime. Property crime would be at 34% above national average. 1 out of 30 residents have a chance of becoming a victim of crime. It is not a very safe neighborhood. We would give it 0 out of 5 ⭐️'s."
+        description: <p>South Philly is known to be really dangerous. It is 43% above national average of total crime. South Philly is known to be really bad for violent crime. It is 93% worse than the national average of violent crime. Property crime would be at 34% above national average. 1 out of 30 residents have a chance of becoming a victim of crime. It is not a very safe neighborhood. We would give it 0 out of 5 ⭐️'s.
+                    <img src="https://t4.ftcdn.net/jpg/02/98/16/63/240_F_298166326_gITi0WtGFpaoX5mAv8oQscXIoilpVtm2.jpg" alt="0 out of 5 stars" />'
+                    </p>
+
     },
     {
         position: [39.964951146087856, -75.19798834216576],
         popUp: 'Mantua',
 
-        description: "Mantua has a population of 8,238 people. Mantua is lower than the national average when it comes to assault! When it comes to murder, Mantua is a bit higher than the national average. The national average being 6.1 per 100,000 residents. In Mantua it would be 9. Mantua is somewhat safe. Police are very visible in Mantua as well as very responsive. We would give it 3 out of 5 ⭐️'s."
+        description: <p>Mantua has a population of 8,238 people. Mantua is lower than the national average when it comes to assault! When it comes to murder, Mantua is a bit higher than the national average. The national average being 6.1 per 100,000 residents. In Mantua it would be 9. Mantua is somewhat safe. Police are very visible in Mantua as well as very responsive. We would give it 3 out of 5 ⭐️'s.
+                    <img src="https://t4.ftcdn.net/jpg/02/98/16/63/240_F_298166352_tlyPez9gIIkUIPe8gX1qQaur42YC5Zjo.jpg" alt="3 out of 5 stars" />'
+                    </p>
+
     },
     {
         position: [39.950431552151805, -75.2203727251815],
         popUp: 'Cedar Park',
 
-        description: "Cedar Park is a very safe place. It has a population of 7,922 people. Cedar Park has very low rates compared to the national average when it comes to assault, murder, rape, robbery, burglary, theft, and motor-vehicle theft. Cedar Park  would be safe compared to many other neighborhoods surrounding University Park. We would give it 4 out of 5 ⭐️'s."
+        description: <p>Cedar Park is a very safe place. It has a population of 7,922 people. Cedar Park has very low rates compared to the national average when it comes to assault, murder, rape, robbery, burglary, theft, and motor-vehicle theft. Cedar Park  would be safe compared to many other neighborhoods surrounding University Park. We would give it 4 out of 5 ⭐️'s.
+                    <img src="https://as2.ftcdn.net/v2/jpg/02/98/16/63/1000_F_298166355_BvfU0450lPRi51CNc2DKaPiEuujvn5Op.jpg" alt="4 out of 5 stars" />'
+                    </p>
+
     },
     {
         position: [39.9609193940143, -75.19265863481958],
         popUp: 'Powelton Village',
 
-        description: "Powelton Village is a completely safe place to live and many students live in the area. However, the neighborhood is known for its Victorian homes and historical significance. Many student live in Powelton Village. It has a population of 4,236. Powelton is one of the safest places to live in Pennsylvania.  It is a part of University City and has a mix of both local residents and college students. It is very safe. The national average of assault is 282.7 out of 100,000 residents. Powelton Village has 26.8. Burglary, theft, rape, and murder is not be a problem when living here. We would rate Powelton Village 5 out of 5 ⭐️'s."
+        description: <p>Powelton Village is a completely safe place to live and many students live in the area. However, the neighborhood is known for its Victorian homes and historical significance. Many student live in Powelton Village. It has a population of 4,236. Powelton is one of the safest places to live in Pennsylvania.  It is a part of University City and has a mix of both local residents and college students. It is very safe. The national average of assault is 282.7 out of 100,000 residents. Powelton Village has 26.8. Burglary, theft, rape, and murder is not be a problem when living here. We would rate Powelton Village 5 out of 5 ⭐️'s.
+                    <img src="https://as2.ftcdn.net/v2/jpg/02/98/16/63/1000_F_298166362_yFh1SAtWKKltPWdyIHuXwbHw9vrWC1C1.jpg" alt="5 out of 5 stars" />'
+                    </p>
 
     },
     // zfm24 = Added 8 new locations with longitude and latitude coordinates, and proper descriptions for each location
@@ -129,29 +144,24 @@ const Map = () => {
 <br></br>
 Five Neighborhoods near University City: <br></br>
 <br></br>
-West Philadelphia:
+1. West Philadelphia
 <br></br>
 <br></br>
-<img src="https://t4.ftcdn.net/jpg/02/98/16/63/240_F_298166336_4Z8JfBEFGDAWZf625kzvYZz8Cvrm80s3.jpg" alt="1 out of 5 stars" />
 <br></br>
-South Philadelphia:
-<br></br>
-<br></br>
-<img src="https://t4.ftcdn.net/jpg/02/98/16/63/240_F_298166326_gITi0WtGFpaoX5mAv8oQscXIoilpVtm2.jpg" alt="0 out of 5 stars" />
-<br></br>
-Mantua: 
+2. South Philadelphia
 <br></br>
 <br></br>
-<img src="https://t4.ftcdn.net/jpg/02/98/16/63/240_F_298166352_tlyPez9gIIkUIPe8gX1qQaur42YC5Zjo.jpg" alt="3 out of 5 stars" />
 <br></br>
-Cedar Park:
+3. Mantua
 <br></br>
 <br></br>
-<img src="https://as2.ftcdn.net/v2/jpg/02/98/16/63/1000_F_298166355_BvfU0450lPRi51CNc2DKaPiEuujvn5Op.jpg" alt="4 out of 5 stars" />
 <br></br>
-Powelton Village:
+4. Cedar Park
 <br></br>
-<img src="https://as2.ftcdn.net/v2/jpg/02/98/16/63/1000_F_298166362_yFh1SAtWKKltPWdyIHuXwbHw9vrWC1C1.jpg" alt="5 out of 5 stars" />
+<br></br>
+<br></br>
+5. Powelton Village
+<br></br>
             </p>
         </div>
 {/* wl484: calling the function from UserLocation.jsx */}
