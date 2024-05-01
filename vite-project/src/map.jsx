@@ -5,15 +5,14 @@ import L from "leaflet";
 import Mylocation from "./UserLocation";
 import React, { useState } from 'react';
 import userLocationIconUrl from "./Images/userLocation.png";
+import drexelIconImg from "./Images/drexelmarker.png";
 
 // zfm24 = wrote in pinpoints for map, taking longitude and latitude coordinates from Google Maps, and labeling it within the pop-up
 const markers = [
     {
         position: [39.986829339542545, -75.21110223998414],
         popUp: 'West Philadelphia',
-        description: <p>According to many trustable sites, West Philadelphia is safer than 7 percent of neighborhoods in the entire United States. West Philadelphia has around 200-637 residents. There are about 81 violent crime rates, 231 property crime rates, and around 312 crimes in the neighborhood. West Philadelphia does have a higher drug rate at 0.26 compared to other neighborhoods in Philadelphia. We would give it 1 out of 5 ⭐️\'s. 
-                     <img src="https://t4.ftcdn.net/jpg/02/98/16/63/240_F_298166336_4Z8JfBEFGDAWZf625kzvYZz8Cvrm80s3.jpg" alt="1 out of 5 stars" />'
-                     </p>
+        description: 'According to many trustable sites, West Philadelphia is safer than 7 percent of neighborhoods in the entire United States. West Philadelphia has around 200-637 residents. There are about 81 violent crime rates, 231 property crime rates, and around 312 crimes in the neighborhood. West Philadelphia does have a higher drug rate at 0.26 compared to other neighborhoods in Philadelphia. We would give it 1 out of 5 ⭐️\'s. <br> <img src="https://t4.ftcdn.net/jpg/02/98/16/63/240_F_298166336_4Z8JfBEFGDAWZf625kzvYZz8Cvrm80s3.jpg" alt="1 out of 5 stars" />'
         
     }
     
@@ -49,7 +48,6 @@ const markers = [
     {        
         position: [39.9566, -75.1899],
         popUp: 'Drexel University',
-
         description: "Drexel strives to create a safe community among campus housing, while providing students with DrexelALERTs around campus through the Drexel Guardian app. This app also provides walking escorts 24/7 for students. Students can stay engaged with campus activities to meet the diverse cultures in Philadelphia! We would give this location 5 out of 5 ⭐️'s."
     },
     {
@@ -98,6 +96,13 @@ const markers = [
         description: "As it America's independence began here, this is a safe area to live in Philadelphia. Old City is a very beautiful place with local transit, restuarants, stores, etc. We would give this location 5 out of 5 ⭐️'s."
     }
     ];
+
+
+    const drexelIcon = new L.Icon({
+        iconUrl: drexelIconImg,
+        iconSize: [60, 65],
+    });
+    
     
     const userLocationIcon = new L.Icon({
         iconUrl: userLocationIconUrl,
@@ -122,8 +127,8 @@ const Map = () => {
             <img src= "/Images/Website Logo.png" alt=""/>
             <div id="Research">
             <h2>
-            <div className="map-image">
-        <img src="https://cdn-icons-png.flaticon.com/512/235/235861.png" alt="Image" className="rounded-image" />
+            <div class="map-image">
+        <img src="https://cdn-icons-png.flaticon.com/512/235/235861.png" alt="Image" class="rounded-image" />
             </div>
       
             </h2>
@@ -187,13 +192,14 @@ Powelton Village:
                 </LayersControl>
                 {/* zfm24 = changed markers format, taken by ChatGPT 3 */}
                 {markers.map(marker => (
-                    <Marker key={marker.popUp} position={marker.position}>
+                    <Marker key={marker.popUp} position={marker.position} icon={marker.popUp === 'Drexel University' ? drexelIcon : undefined}>
                         <Popup className="Popup_size">
                             <h1>{marker.popUp}</h1>
                             <p>{marker.description}</p>            
                         </Popup>
                     </Marker>
                 ))}
+
                 {/* From ChatGPT 4/28/24 */}
                 {/* Modified by Weihao Li */}
                 {/* wl484: using fetched user location to display a new marker on the map */}
@@ -211,5 +217,11 @@ Powelton Village:
     ); 
 };  
 export default Map;    
+
+
+
+
+
+
 
 
