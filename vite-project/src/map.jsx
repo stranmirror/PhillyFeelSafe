@@ -8,6 +8,8 @@ import userLocationIconUrl from "./Images/userLocation.png";
 import drexelIconImg from "./Images/drexelmarker.png";
 
 // zfm24 = wrote in pinpoints for map, taking longitude and latitude coordinates from Google Maps, and labeling it within the pop-up
+
+
 const markers = [
     {
         position: [39.986829339542545, -75.21110223998414],
