@@ -4,8 +4,8 @@ const Home = () => {
     return (  
         <div className="home">
            
-           <div class="image-container">
-    <img src="https://cdn0.iconfinder.com/data/icons/modern-ui-glyph-1/64/modern-ui-glyph-1-03-512.png" alt="Image" class="rounded-image" />
+           <div className="image-container">
+    <img src="https://cdn0.iconfinder.com/data/icons/modern-ui-glyph-1/64/modern-ui-glyph-1-03-512.png" alt="Image" className="rounded-image" />
 </div>
 
 

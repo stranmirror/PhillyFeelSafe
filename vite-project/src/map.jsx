@@ -7,6 +7,8 @@ import React, { useState } from 'react';
 import userLocationIconUrl from "./Images/userLocation.png";
 import drexelIconImg from "./Images/drexelmarker.png";
 
+const defaultIcon = new L.Icon.Default();
+
 // zfm24 = wrote in pinpoints for map, taking longitude and latitude coordinates from Google Maps, and labeling it within the pop-up
 
 
@@ -129,8 +131,8 @@ const Map = () => {
             <img src= "/Images/Website Logo.png" alt=""/>
             <div id="Research">
             <h2>
-            <div class="map-image">
-        <img src="https://cdn-icons-png.flaticon.com/512/235/235861.png" alt="Image" class="rounded-image" />
+            <div className="map-image">
+        <img src="https://cdn-icons-png.flaticon.com/512/235/235861.png" alt="Image" className="rounded-image" />
             </div>
       
             </h2>
@@ -194,7 +196,7 @@ Powelton Village:
                 </LayersControl>
                 {/* zfm24 = changed markers format, taken by ChatGPT 3 */}
                 {markers.map(marker => (
-                    <Marker key={marker.popUp} position={marker.position} icon={marker.popUp === 'Drexel University' ? drexelIcon : undefined}>
+                    <Marker key={marker.popUp} position={marker.position} icon={marker.popUp === 'Drexel University' ? drexelIcon : defaultIcon }>
                         <Popup className="Popup_size">
                             <h1>{marker.popUp}</h1>
                             <p>{marker.description}</p>            
@@ -219,6 +221,7 @@ Powelton Village:
     ); 
 };  
 export default Map;    
+
 
 
 
