@@ -6,8 +6,41 @@ import Mylocation from "./UserLocation";
 import React, { useState } from 'react';
 import userLocationIconUrl from "./Images/userLocation.png";
 import drexelIconImg from "./Images/drexelmarker.png";
+import upennIconImg from "./Images/upenn.png";
+import templeIconImg from "./Images/temple.png";
+import chinatownIconImg from "./Images/chinatown.png";
+import villageIconImg from "./Images/village.png";
 
 const defaultIcon = new L.Icon.Default();
+
+
+const drexelIcon = new L.Icon({
+    iconUrl: drexelIconImg,
+    iconSize: [60, 65],
+});
+
+
+const upennIcon = new L.Icon({ 
+    iconUrl: upennIconImg,
+    iconSize: [80, 65], 
+});
+
+
+const templeIcon = new L.Icon({ 
+    iconUrl: templeIconImg,
+    iconSize: [35, 40], 
+});
+
+const chinatownIcon = new L.Icon({ 
+    iconUrl: chinatownIconImg,
+    iconSize: [140, 130], 
+});
+
+const villageIcon = new L.Icon({ 
+    iconUrl: villageIconImg,
+    iconSize: [60, 60], 
+});
+
 
 // zfm24 = wrote in pinpoints for map, taking longitude and latitude coordinates from Google Maps, and labeling it within the pop-up
 
@@ -99,13 +132,11 @@ const markers = [
 
         description: "As it America's independence began here, this is a safe area to live in Philadelphia. Old City is a very beautiful place with local transit, restuarants, stores, etc. We would give this location 5 out of 5 ⭐️'s."
     }
+    
+
     ];
 
 
-    const drexelIcon = new L.Icon({
-        iconUrl: drexelIconImg,
-        iconSize: [60, 65],
-    });
     
     
     const userLocationIcon = new L.Icon({
@@ -196,7 +227,14 @@ Powelton Village:
                 </LayersControl>
                 {/* zfm24 = changed markers format, taken by ChatGPT 3 */}
                 {markers.map(marker => (
-                    <Marker key={marker.popUp} position={marker.position} icon={marker.popUp === 'Drexel University' ? drexelIcon : defaultIcon }>
+                    <Marker key={marker.popUp} position={marker.position} icon={
+                        marker.popUp === 'Drexel University' ? drexelIcon :
+                        marker.popUp === 'University of Pennsylvania' ? upennIcon :
+                        marker.popUp === 'Temple University' ? templeIcon :
+                        marker.popUp === "Chinatown" ? chinatownIcon :
+                        marker.popUp.toLowerCase().includes('village') ? villageIcon :
+                        defaultIcon
+                    }>
                         <Popup className="Popup_size">
                             <h1>{marker.popUp}</h1>
                             <p>{marker.description}</p>            
