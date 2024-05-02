@@ -13,7 +13,7 @@ import villageIconImg from "./Images/village.png";
 
 const defaultIcon = new L.Icon.Default();
 
-
+//aa4763  = wrote the bottom  5 functions for custom icons on specific pinpoints on our map
 const drexelIcon = new L.Icon({
     iconUrl: drexelIconImg,
     iconSize: [60, 65],
@@ -235,6 +235,7 @@ Powelton Village:
                         marker.popUp.toLowerCase().includes('village') ? villageIcon :
                         defaultIcon
                     }>
+                        {/* aa4763: wrote the code above to replace the defualt icons with custom icons if those places were specifially any of the locations above*/}
                         <Popup className="Popup_size">
                             <h1>{marker.popUp}</h1>
                             <p>{marker.description}</p>            
