@@ -5,8 +5,46 @@ import L from "leaflet";
 import Mylocation from "./UserLocation";
 import React, { useState } from 'react';
 import userLocationIconUrl from "./Images/userLocation.png";
+import drexelIconImg from "./Images/drexelmarker.png";
+import upennIconImg from "./Images/upenn.png";
+import templeIconImg from "./Images/temple.png";
+import chinatownIconImg from "./Images/chinatown.png";
+import villageIconImg from "./Images/village.png";
+
+const defaultIcon = new L.Icon.Default();
+
+//aa4763  = wrote the bottom  5 functions for custom icons on specific pinpoints on our map
+const drexelIcon = new L.Icon({
+    iconUrl: drexelIconImg,
+    iconSize: [60, 65],
+});
+
+
+const upennIcon = new L.Icon({ 
+    iconUrl: upennIconImg,
+    iconSize: [80, 65], 
+});
+
+
+const templeIcon = new L.Icon({ 
+    iconUrl: templeIconImg,
+    iconSize: [35, 40], 
+});
+
+const chinatownIcon = new L.Icon({ 
+    iconUrl: chinatownIconImg,
+    iconSize: [140, 130], 
+});
+
+const villageIcon = new L.Icon({ 
+    iconUrl: villageIconImg,
+    iconSize: [60, 60], 
+});
+
 
 // zfm24 = wrote in pinpoints for map, taking longitude and latitude coordinates from Google Maps, and labeling it within the pop-up
+
+
 const markers = [
     {
         
@@ -62,7 +100,6 @@ const markers = [
     {        
         position: [39.9566, -75.1899],
         popUp: 'Drexel University',
-
         description: "Drexel strives to create a safe community among campus housing, while providing students with DrexelALERTs around campus through the Drexel Guardian app. This app also provides walking escorts 24/7 for students. Students can stay engaged with campus activities to meet the diverse cultures in Philadelphia! We would give this location 5 out of 5 ⭐️'s."
     },
     {
@@ -110,7 +147,12 @@ const markers = [
 
         description: "As it America's independence began here, this is a safe area to live in Philadelphia. Old City is a very beautiful place with local transit, restuarants, stores, etc. We would give this location 5 out of 5 ⭐️'s."
     }
+    
+
     ];
+
+
+    
     
     const userLocationIcon = new L.Icon({
         iconUrl: userLocationIconUrl,
@@ -135,8 +177,8 @@ const Map = () => {
             <img src= "/Images/Website Logo.png" alt=""/>
             <div id="Research">
             <h2>
-            <div class="map-image">
-        <img src="https://cdn-icons-png.flaticon.com/512/235/235861.png" alt="Image" class="rounded-image" />
+            <div className="map-image">
+        <img src="https://cdn-icons-png.flaticon.com/512/235/235861.png" alt="Image" className="rounded-image" />
             </div>
       
             </h2>
@@ -195,13 +237,22 @@ Five Neighborhoods near University City: <br></br>
                 </LayersControl>
                 {/* zfm24 = changed markers format, taken by ChatGPT 3 */}
                 {markers.map(marker => (
-                    <Marker key={marker.popUp} position={marker.position}>
+                    <Marker key={marker.popUp} position={marker.position} icon={
+                        marker.popUp === 'Drexel University' ? drexelIcon :
+                        marker.popUp === 'University of Pennsylvania' ? upennIcon :
+                        marker.popUp === 'Temple University' ? templeIcon :
+                        marker.popUp === "Chinatown" ? chinatownIcon :
+                        marker.popUp.toLowerCase().includes('village') ? villageIcon :
+                        defaultIcon
+                    }>
+                        {/* aa4763: wrote the code above to replace the defualt icons with custom icons if those places were specifially any of the locations above*/}
                         <Popup className="Popup_size">
                             <h1>{marker.popUp}</h1>
                             <p>{marker.description}</p>            
                         </Popup>
                     </Marker>
                 ))}
+
                 {/* From ChatGPT 4/28/24 */}
                 {/* Modified by Weihao Li */}
                 {/* wl484: using fetched user location to display a new marker on the map */}
@@ -219,5 +270,11 @@ Five Neighborhoods near University City: <br></br>
     ); 
 };  
 export default Map;    
+
+
+
+
+
+
 
 

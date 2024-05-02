@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import logo from "./Images/logo.png";
+import logo from "./Images/1.png";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import Navbar from './Navbar';
@@ -16,7 +16,7 @@ function App() {
         <> 
     <div id="title-block">
         <a href="/">
-        <img src={logo} id="main-icon" alt="logo" style={{ width: '200px', height: '100px' }} />
+        <img src={logo} id="main-icon" alt="logo" style={{ width: '150px', height: '150px' }} />
         </a>
 {/* wl484: moved title from navbar.jsx into a <span> tag to display the title next to the icon */}
         <span id="title"> &nbsp; PhillyFeelSafe</span>
