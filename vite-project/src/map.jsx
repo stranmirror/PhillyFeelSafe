@@ -185,9 +185,6 @@ const Map = () => {
             
         </div>
 {/* wl484: calling the function from UserLocation.jsx */}
-<div>
-    <Mylocation onLocationUpdate={handleUserLocation} />
-</div>
         
             <MapContainer center={[39.952237, -75.163626]} zoom={13}>
 {/* zfm24 = added button in corner of map that allows users to switch, LayersControl and BaseLayer tag placed by ChatGPT */}
@@ -243,6 +240,10 @@ const Map = () => {
                     </Marker> 
             )}
             </MapContainer>
+
+            <div>
+                <Mylocation onLocationUpdate={handleUserLocation} />
+            </div>
         </div>
                         
     ); 
