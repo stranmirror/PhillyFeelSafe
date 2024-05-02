@@ -16,7 +16,7 @@ function App() {
         <> 
     <div id="title-block">
         <a href="/">
-        <img src={logo} id="main-icon" alt="logo" style={{ width: '150px', height: '150px' }} />
+        <img src={logo} id="main-icon" alt="logo" style={{ width: '200px', height: '200px' }} />
         </a>
 {/* wl484: moved title from navbar.jsx into a <span> tag to display the title next to the icon */}
         <span id="title"> &nbsp; PhillyFeelSafe</span>

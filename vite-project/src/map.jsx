@@ -182,29 +182,7 @@ const Map = () => {
             </div>
       
             </h2>
-            <p>
-<br></br>
-Five Neighborhoods near University City: <br></br>
-<br></br>
-1. West Philadelphia
-<br></br>
-<br></br>
-<br></br>
-2. South Philadelphia
-<br></br>
-<br></br>
-<br></br>
-3. Mantua
-<br></br>
-<br></br>
-<br></br>
-4. Cedar Park
-<br></br>
-<br></br>
-<br></br>
-5. Powelton Village
-<br></br>
-            </p>
+            
         </div>
 {/* wl484: calling the function from UserLocation.jsx */}
 <div>
