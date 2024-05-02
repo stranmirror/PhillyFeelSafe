@@ -10,6 +10,9 @@ import upennIconImg from "./Images/upenn.png";
 import templeIconImg from "./Images/temple.png";
 import chinatownIconImg from "./Images/chinatown.png";
 import villageIconImg from "./Images/village.png";
+import rittenhouseIconImg from "./Images/rittenhouse.png";
+import oldcityIconImg from "./Images/oldcity.png";
+
 
 const defaultIcon = new L.Icon.Default();
 
@@ -38,8 +41,19 @@ const chinatownIcon = new L.Icon({
 
 const villageIcon = new L.Icon({ 
     iconUrl: villageIconImg,
+    iconSize: [40, 40], 
+});
+
+const rittenhouseIcon = new L.Icon({ 
+    iconUrl: rittenhouseIconImg,
+    iconSize: [50, 50], 
+});
+
+const oldcityIcon = new L.Icon({ 
+    iconUrl: oldcityIconImg,
     iconSize: [60, 60], 
 });
+
 
 
 // zfm24 = wrote in pinpoints for map, taking longitude and latitude coordinates from Google Maps, and labeling it within the pop-up
@@ -156,7 +170,7 @@ const markers = [
     
     const userLocationIcon = new L.Icon({
         iconUrl: userLocationIconUrl,
-        iconSize: [38,38],
+        iconSize: [60, 60],
     });
 
 // added variable that sets BaseLayer to Layers Control, allowing user to interact with button on map (referenced from ChatGPT)
@@ -218,6 +232,12 @@ const Map = () => {
                         marker.popUp === 'Temple University' ? templeIcon :
                         marker.popUp === "Chinatown" ? chinatownIcon :
                         marker.popUp.toLowerCase().includes('village') ? villageIcon :
+                        marker.popUp.toLowerCase().includes('philadelphia') ? villageIcon :
+                        marker.popUp === "Rittenhouse Square" ? rittenhouseIcon :
+                        marker.popUp === "Cedar Park" ? rittenhouseIcon :
+                        marker.popUp === "Fairmount" ? villageIcon :
+                        marker.popUp === "Mantua" ? villageIcon :
+                        marker.popUp === "Old City" ? oldcityIcon :
                         defaultIcon
                     }>
                         {/* aa4763: wrote the code above to replace the defualt icons with custom icons if those places were specifially any of the locations above*/}
