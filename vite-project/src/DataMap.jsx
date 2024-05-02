@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, LayersControl } from 'react-leaflet';
 import "./App.css";
 //From ChatGPT, 4/21/24
 //Modified by Weihao Li, 4/21/24
@@ -16,13 +16,27 @@ function DataMap ({ filteredData }) {
     return (
         <div className="DataMap">
             <MapContainer center={[39.952237, -75.163626]} zoom={13}>
-               <TileLayer 
-                    attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}"
-                    minZoom={0}
-                    maxZoom={20}
-                    ext="png" 
-                />
+                <LayersControl position="topright">
+                    <LayersControl.BaseLayer checked name="Dark Mode">
+                        <TileLayer 
+                            attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                            url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}"
+                            minZoom={0}
+                            maxZoom={20}
+                            ext="png" 
+                        />
+                        {/* aa4763 followed a similar format from map.jsx file which was implemented by Zahra*/}
+                    </LayersControl.BaseLayer>
+                    <LayersControl.BaseLayer name="Light Mode">
+                        <TileLayer 
+                            attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                            url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.{ext}"
+                            minZoom={0}
+                            maxZoom={20}
+                            ext="png"
+                        />
+                    </LayersControl.BaseLayer>
+                </LayersControl>
                 {validData.map((data,index) => (
                     <Marker 
                     key={index} 

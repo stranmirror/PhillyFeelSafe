@@ -215,7 +215,7 @@ Five Neighborhoods near University City: <br></br>
 {/* zfm24 = added button in corner of map that allows users to switch, LayersControl and BaseLayer tag placed by ChatGPT */}
                 <LayersControl position="topright">
                     {/* zfm24 = Layer 1 Dark Theme, originally inserted by Aahil */}
-                    <BaseLayer checked name="Dark Smooth Tiles">
+                    <BaseLayer checked name="Dark Mode">
                         <TileLayer
                             attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                             url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}"
@@ -225,7 +225,7 @@ Five Neighborhoods near University City: <br></br>
                         />
                     </BaseLayer>
                     {/* zfm24 = added Layer 2  Light Theme*/}
-                    <BaseLayer name="Smooth Tiles">
+                    <BaseLayer name="White Mode">
                         <TileLayer
                             attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                             url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.{ext}"
