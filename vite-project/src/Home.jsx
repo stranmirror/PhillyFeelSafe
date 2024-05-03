@@ -1,14 +1,16 @@
 import React from 'react';
+import './Home.css';
+
 
 const Home = () => {
-    return (  
+    return (          
         <div className="home">
+            <div className='content'>
            
            <div className="image-container">
-    <img src="https://cdn0.iconfinder.com/data/icons/modern-ui-glyph-1/64/modern-ui-glyph-1-03-512.png" alt="Image" className="rounded-image" />
+    </div>
 </div>
-
-
+  
             <span className="welcoming-message">Message from the Developer Team:</span> 
             <br></br>
             <br></br>
@@ -37,7 +39,7 @@ const Home = () => {
                dangerous and 5 very safe). This level is fixable according to the 
                crime history.
             </p>
-        </div>
+        </div> 
         <span id="HomeHeading3">
             <h2>Why We Created It</h2>
             <p>The purpose of this website is to serve as a totally free 24-hour guide 
@@ -56,6 +58,8 @@ const Home = () => {
             </p>
         </span>
         </div>
+
+
     );
 }
 
