@@ -28,6 +28,7 @@ const Home = () => {
         </div>
         <div id="HomeHeading2">
             <h2>How It Works</h2>
+            <div className = "Homebody"> 
             <p>You will be taken to our actual digital map webpage by clicking on 
                this interactive map model. Our interactive digital map will allow 
                you to check on the safety level of various neighborhoods. You can 
@@ -37,23 +38,31 @@ const Home = () => {
                dangerous and 5 very safe). This level is fixable according to the 
                crime history.
             </p>
-        </div>
+            <img src={'src/Images/Wrench.png'} style={{ width: '400px', height: '300px', float: 'right' }} />
+            </div>
+        </div> 
         <span id="HomeHeading3">
             <h2>Why We Created It</h2>
+            <div className = "Homebody2">
             <p>The purpose of this website is to serve as a totally free 24-hour guide 
                that helps you feel secure and connected with the local community. Our
                platform aims to provide you with the safest, most reliable, and most 
                convenient tools to achieve this goal.
             </p>
+            <img src = {'src/Images/Lock.png'} style= {{ width: '200px', height: '200px', float: 'right' }} />
+            </div>
         </span>
         <span id="HomeHeading4">
             <h2>About Us</h2>
+            <div className = "Homebody3">
+            <img src={'src/Images/image.png'} style={{ width: '200px', height: '200px', float: 'right' }} />
             <p>We are Drexel CCI students who joined together in this group to develop 
                the PhillyFeelSafe Website. Our team has diverse backgrounds and 
                experiences, but we all have the same objective and belief in this project. 
                That is to create this quality platform for the users. The team members 
                are Aahil Afraz, Weihao Li, Zarah Malik, and Daniyal Amjed. 
             </p>
+            </div>
         </span>
         </div>
     );
