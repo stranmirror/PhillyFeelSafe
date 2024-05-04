@@ -1,135 +1,176 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-
-
 
 html, body {
-  overflow-x: hidden;  /* Prevent horizontal scrolling */
+    height: 100%; /* Ensure these are not exceeding 100% */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide horizontal overflow if not necessary */
+    overflow-y: auto; /* Ensure single vertical scroll */
+
+}
+
+body, html {
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+}
+
+ 
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+.home {
+    min-height: 100vh; 
+    height: auto;  
+} 
+
+
+.home-heading h2, .home-heading p {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+
+.home-heading {
+    margin-top: 120px; /* More or less as needed */
+    padding: 20px; /* Ensure padding is not causing overflow */
+    width: 80%;
 }
 
 
 .home {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: rgb(233, 225, 225);
-  text-align: center;
-  padding: 50px 20px;
-  font-family: "Saira", sans-serif;
+    /* Existing styles */
+    color: var(--text-color-light);  /* Switch to light text initially */
+    background-color: var(--bg-color-light); /* Switch to light background initially */
+}
+
+.dark-theme {
+    color: var(--text-color-dark);
+    background-color: var(--bg-color-dark);
+    background: linear-gradient(330deg, rgb(19, 16, 16), transparent); /* Dark gradient */
+}   
+
+
+.home-heading {
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, visibility 0.6s;
+}
+
+.home-heading.in-view {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
 }
 
 
-
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(233, 225, 225);
+    text-align: center;
+    padding: 1rem; /* Reduced padding */
+    font-family: "Saira", sans-serif;
+    background-color: rgb(0, 0, 0);
+    background: linear-gradient(330deg, rgb(19, 16, 16), transparent);
+}
 
 .home::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('./Images/skyline.jpg') no-repeat center center fixed;
-  background-size: cover;
-  /* Apply the blur and darken effects here */
-  filter: blur(4px);
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: darken;
-  z-index: -1; /* Ensures it stays behind the content */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./Images/skyline.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    z-index: -1;
 }
 
 
 
-
-/* wl484: set body of home page into a gradient color */
-.home {
-  font-size: 30px;
-  background-color: rgb(0, 0, 0);
-  background:linear-gradient(330deg, rgb(19, 16, 16), transparent);
+:root {
+    --text-color-light: #000;   /* Dark text for light background */
+    --bg-color-light: #fff;     /* White background for light theme */
+    --text-color-dark: #fff;    /* White text for dark background */
+    --bg-color-dark: #333;      /* Dark background for dark theme */
 }
 
+body {
+    color: var(--text-color-light);
+    background-color: var(--bg-color-light);
+    transition: background-color 0.3s, color 0.3s;
+}
 
+.dark-theme {
+    color: var(--text-color-dark);
+    background-color: var(--bg-color-dark);
+}
 
-  /* wl484: this css refers to the PhillyFeelSafe Title */
 #title {
-  font-size: 90px;
-  font-family: "Saira", sans-serif;
-  font-style: normal;
-  font-weight:375;
-  color: rgb(0, 0, 0);
+    font-size: 5rem; /* Adjusted font size */
+    color: rgb(0, 0, 0); /* Enhanced visibility */
 }
 
-
-
-
-
-
-
+p, h2 {
+    color: white; /* Ensures text is visible against the background */
+}
 
 .rounded-image {
-  width: 150px; /* Adjust the width and height as needed */
-  height: 150px;
-  border-radius: 50%; /* Make the image circular */
-  border: 7px solid black; /* Optional: Add a border */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 7px solid black;
 }
 
-p {
-  font-size: 32px;
-  text-align: center;
-  font-family: "Varela Round", sans-serif;
+#HomeHeading1, #HomeHeading2, #HomeHeading3, #HomeHeading4 {
+    text-align: center;
+    margin-top: 100px; /* Adds spacing between sections */
+    width: 70%; /* Controls width of the text block */
+    margin-left: auto;
+    margin-right: auto;
 }
-#HomeHeading1 {
-  text-align: center;
- 
-}
-h2 {
-  font-family: "Saira", sans-serif;
-  font-style: normal;
-  font-size: 40px;
-}
-/* wl484: each # of heading represent the bolded text*/
-#HomeHeading2 {
-  text-align: left;
-  margin: 40px;
-}
-#HomeHeading3 {
-  text-align: left;
-  margin: 20px;
-}
-#HomeHeading4 {
-  text-align: left;
-  margin-right: 20px;
-  margin-left: 20px;
-}
+
+
+
+
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+    height: 2em;
+    padding: 1.1em;
+    will-change: filter;
+    transition: filter 200ms;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #256400aa);
+    filter: drop-shadow(0 0 2em #256400aa);
 }
+
 .logo.react:hover {
- filter: drop-shadow(0 0 2em #00e73eaa);
-
-}
-/* wl484: this css refers to the PhillyFeelSafe Title */
-#title {
-  font-size: 90px;
-  font-family: "Saira", sans-serif;
-  font-style: normal;
-  font-weight:375;
-  color: rgb(0, 0, 0);
+    filter: drop-shadow(0 0 2em #00e73eaa);
 }
 
+@media (max-width: 1024px) {
+    #title {
+        font-size: 2rem;
+    }
+}
 
-
-
+@media (max-width: 768px) {
+    #title {
+        font-size: 1.5rem;
+    }
+}
