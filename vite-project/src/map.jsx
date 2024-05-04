@@ -10,6 +10,9 @@ import upennIconImg from "./Images/upenn.png";
 import templeIconImg from "./Images/temple.png";
 import chinatownIconImg from "./Images/chinatown.png";
 import villageIconImg from "./Images/village.png";
+import rittenhouseIconImg from "./Images/rittenhouse.png";
+import oldcityIconImg from "./Images/oldcity.png";
+
 
 const defaultIcon = new L.Icon.Default();
 
@@ -38,8 +41,19 @@ const chinatownIcon = new L.Icon({
 
 const villageIcon = new L.Icon({ 
     iconUrl: villageIconImg,
+    iconSize: [40, 40], 
+});
+
+const rittenhouseIcon = new L.Icon({ 
+    iconUrl: rittenhouseIconImg,
+    iconSize: [50, 50], 
+});
+
+const oldcityIcon = new L.Icon({ 
+    iconUrl: oldcityIconImg,
     iconSize: [60, 60], 
 });
+
 
 
 // zfm24 = wrote in pinpoints for map, taking longitude and latitude coordinates from Google Maps, and labeling it within the pop-up
@@ -156,7 +170,7 @@ const markers = [
     
     const userLocationIcon = new L.Icon({
         iconUrl: userLocationIconUrl,
-        iconSize: [38,38],
+        iconSize: [60, 60],
     });
 
 // added variable that sets BaseLayer to Layers Control, allowing user to interact with button on map (referenced from ChatGPT)
@@ -185,15 +199,12 @@ const Map = () => {
             
         </div>
 {/* wl484: calling the function from UserLocation.jsx */}
-<div>
-    <Mylocation onLocationUpdate={handleUserLocation} />
-</div>
         
             <MapContainer center={[39.952237, -75.163626]} zoom={13}>
 {/* zfm24 = added button in corner of map that allows users to switch, LayersControl and BaseLayer tag placed by ChatGPT */}
                 <LayersControl position="topright">
                     {/* zfm24 = Layer 1 Dark Theme, originally inserted by Aahil */}
-                    <BaseLayer checked name="Dark Smooth Tiles">
+                    <BaseLayer checked name="Dark Mode">
                         <TileLayer
                             attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                             url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}"
@@ -203,7 +214,7 @@ const Map = () => {
                         />
                     </BaseLayer>
                     {/* zfm24 = added Layer 2  Light Theme*/}
-                    <BaseLayer name="Smooth Tiles">
+                    <BaseLayer name="White Mode">
                         <TileLayer
                             attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                             url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.{ext}"
@@ -221,6 +232,12 @@ const Map = () => {
                         marker.popUp === 'Temple University' ? templeIcon :
                         marker.popUp === "Chinatown" ? chinatownIcon :
                         marker.popUp.toLowerCase().includes('village') ? villageIcon :
+                        marker.popUp.toLowerCase().includes('philadelphia') ? villageIcon :
+                        marker.popUp === "Rittenhouse Square" ? rittenhouseIcon :
+                        marker.popUp === "Cedar Park" ? rittenhouseIcon :
+                        marker.popUp === "Fairmount" ? villageIcon :
+                        marker.popUp === "Mantua" ? villageIcon :
+                        marker.popUp === "Old City" ? oldcityIcon :
                         defaultIcon
                     }>
                         {/* aa4763: wrote the code above to replace the defualt icons with custom icons if those places were specifially any of the locations above*/}
@@ -243,6 +260,10 @@ const Map = () => {
                     </Marker> 
             )}
             </MapContainer>
+
+            <div>
+                <Mylocation onLocationUpdate={handleUserLocation} />
+            </div>
         </div>
                         
     ); 

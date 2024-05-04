@@ -36,13 +36,13 @@ function Mylocation( { onLocationUpdate }) {
 {/* wl484: display message on screen to inform the user */}
     return (
         <div>
-            <h2>My Current Location</h2>
             {error ? (
                 <p>Error: {error}</p>
             ) : (
                 <p>
             {position.latitude && position.longitude ? (
                 <>
+                    <span>My Current Location is at</span> &nbsp;
                     Latitude: {position.latitude}, Longitude: {position.longitude}
                 </>
             ) : (
