@@ -1,12 +1,14 @@
 import React from "react";
-
+import './reference.css';
+// zfm24 = added Reference links from new pinpoint research 
  const reference = () => {
      return (
-     // zfm24 = added Reference links from new pinpoint research 
+        <div className="backgroundImage">
          <div>
              <h2>References for Crime Data: </h2>
-             <div className="Referencelinks">
+             <div>
                 <br></br>
+            <div className="links">
                 <a href="https://www.visitphilly.com/areas/philadelphia-neighborhoods">https://www.visitphilly.com/areas/philadelphia-neighborhoods</a>
                 <br></br>
                 <a href="https://drexel.edu/life-at-drexel/campus-safety">https://drexel.edu/life-at-drexel/campus-safety</a>
@@ -31,7 +33,9 @@ import React from "react";
                 <br></br>
                 <a href="https://www.veryapt.com/guides/neighborhood/6-philadelphia-old-city/">https://www.veryapt.com/guides/neighborhood/6-philadelphia-old-city/</a>
                 <br></br>
+            </div>
              </div>
+         </div>
          </div>
     );
 };

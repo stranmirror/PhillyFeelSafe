@@ -1,5 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup, LayersControl } from "react-leaflet";
-import "./App.css";
+import './App.css';
+import './map.css';
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import Mylocation from "./UserLocation";
@@ -69,11 +70,7 @@ const markers = [
                      </p>
         
 
-    }
-    
-    
-    
-    ,
+    },
     {
         position: [39.92524827111099, -75.17163903260402],
         popUp: 'South Philadelphia',
@@ -187,6 +184,8 @@ const Map = () => {
     };
     
     return (
+        <div className="background"> 
+            
         <div>
             <img src= "/Images/Website Logo.png" alt=""/>
             <div id="Research">
@@ -265,7 +264,7 @@ const Map = () => {
                 <Mylocation onLocationUpdate={handleUserLocation} />
             </div>
         </div>
-                        
+        </div>              
     ); 
 };  
 export default Map;    

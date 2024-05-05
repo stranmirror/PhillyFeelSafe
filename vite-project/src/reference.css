@@ -1,0 +1,20 @@
+/* zfm24 = Added styling to background and links */
+
+.backgroundImage {
+   
+    background: black;
+    padding-bottom: 100%;
+    text-align: center;
+    color: white;
+    
+    
+}
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}
+.links a{
+    color: rgb(169, 206, 219); 
+    font-size: 30px;
+}

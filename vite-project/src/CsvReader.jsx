@@ -56,7 +56,8 @@ function CsvReader() {
     };
 // wl484: the following is what will display in screen itself
     return (
-        <div>
+    
+        <div className="background1">
             <h2>Search for Crime history at Your Location:</h2>
             <div className = "SearchBarContainer">
                 <BiIcons.BiSearch className = "SearchIcon"></BiIcons.BiSearch>
@@ -94,6 +95,7 @@ function CsvReader() {
                 <button disabled={currentPage === Math.ceil(dataRows.length / pageSize)} onClick={() => goToPage(currentPage + 1)}>Next</button>
             </div>
         </div>
+        
 
     );
 }
