@@ -7,6 +7,7 @@
 #root {
   margin: 0px;
   padding: 0;
+  
 }
 #title-block {
   text-align: center;
@@ -73,7 +74,6 @@
   text-decoration: underline;
 }
 
-
 /* wl484: Styleing css code for the map container */
 /* wl484: These Styleing are subject to change */
 .leaflet-container {
@@ -94,13 +94,6 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   font-size: 14px; /* Adjust the font size as needed */
 }
-.DataMap {
-  width: 900px;
-  height: auto;
-}
-
-
-
 
 /* CSS styles for the text inside the popup */
 .Popup_size h1 {
@@ -111,6 +104,12 @@
 .Popup_size p {
   font-size: 15px; /* Adjust the font size of paragraph */
 }
+
+.DataMap {
+  width: 900px;
+  height: auto;
+}
+
 
 
 /* wl484: This section is the styling of the whole side navbar */

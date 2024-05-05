@@ -46,7 +46,8 @@ function CsvReader() {
     };
 // wl484: the following is what will display in screen itself
     return (
-        <div>
+    
+        <div className="background1">
             <h2>Search for Crime history at Your Location:</h2>
             <div className = "SearchBarContainer">
                 <BiIcons.BiSearch className = "SearchIcon"></BiIcons.BiSearch>
@@ -82,6 +83,7 @@ function CsvReader() {
                 <p>No Crime Data found on this location.</p>
             )}
         </div>
+        
 
     );
 }

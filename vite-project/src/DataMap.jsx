@@ -14,6 +14,8 @@ function DataMap ({ filteredData }) {
     });
 
     return (
+        
+
         <div className="DataMap">
             <MapContainer center={[39.952237, -75.163626]} zoom={13}>
                 <LayersControl position="topright">
@@ -53,6 +55,8 @@ function DataMap ({ filteredData }) {
                 ))}
             </MapContainer>
         </div>
+    
+    
     );
 }
 
