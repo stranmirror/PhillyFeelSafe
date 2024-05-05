@@ -70,11 +70,7 @@ const markers = [
                      </p>
         
 
-    }
-    
-    
-    
-    ,
+    },
     {
         position: [39.92524827111099, -75.17163903260402],
         popUp: 'South Philadelphia',

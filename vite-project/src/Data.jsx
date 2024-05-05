@@ -1,6 +1,6 @@
 import React from 'react';
 import CsvReader from './CsvReader';
-import "./DataMap.css";
+
 
 const Data = () => {
     return (
