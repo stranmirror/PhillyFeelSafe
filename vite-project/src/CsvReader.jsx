@@ -10,6 +10,8 @@ function CsvReader() {
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredData, setFilteredData] = useState([]);
     const [showData, setShowData] = useState(false);
+    const [ currentPage, setCurrentPage ] = useState(1);
+    const pageSize = 10;
 
     useEffect(() => {
         fetch('/src/Data/2023 Data Chart1.csv') 
@@ -43,6 +45,14 @@ function CsvReader() {
 
         }
 
+    };
+
+    const startIndex = ( currentPage - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    const currentPageData = dataRows.slice(startIndex, endIndex);
+
+    const goToPage = ( pageNumber ) => {
+        setCurrentPage( pageNumber );
     };
 // wl484: the following is what will display in screen itself
     return (
@@ -78,9 +88,11 @@ function CsvReader() {
                 </tbody>
             </table>
             {/* wl484: displays message if user inputted invalid location name that doesn't match any dataset */}
-            {showData && filteredData.length === 0 && (
-                <p>No Crime Data found on this location.</p>
-            )}
+            <div>
+                <button disabled={currentPage === 1} onClick={() => goToPage(currentPage -1)}>Previous</button>
+                <span>Page {currentPage} of {Math.ceil(dataRows.length / pageSize)}</span>
+                <button disabled={currentPage === Math.ceil(dataRows.length / pageSize)} onClick={() => goToPage(currentPage + 1)}>Next</button>
+            </div>
         </div>
 
     );

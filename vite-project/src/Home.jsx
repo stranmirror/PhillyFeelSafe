@@ -66,7 +66,7 @@ const Home = () => {
         </span>
         </div>
 
-
+</div>
     );
 }
 
