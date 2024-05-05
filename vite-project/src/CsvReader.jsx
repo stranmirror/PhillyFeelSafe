@@ -10,8 +10,12 @@ function CsvReader() {
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredData, setFilteredData] = useState([]);
     const [showData, setShowData] = useState(false);
+// wl484: two constants added to set up paging function
     const [ currentPage, setCurrentPage ] = useState(1);
-    const pageSize = 10;
+// wl484: set number of maximum data in table format per page
+    const pageSize = 20;
+// wl484: set number of maximum pages displaying at once
+    const maxDisplayedPages = 5;
 
     useEffect(() => {
         fetch('/src/Data/2023 Data Chart1.csv') 
@@ -45,15 +49,26 @@ function CsvReader() {
 
         }
 
-    };
+        setCurrentPage(1);
 
+    };
+{/* From ChatGPT, 5/05/24 */}
+{/* Modified by Weihao Li, 5/05/24 */}
+{/* The following const are for pagination feature */}
+// wl484: set pages to array and adding a new function that displays only the necessary page numbers
+    const totalPages = Math.ceil(filteredData.length / pageSize);
+    const pages = Array.from({ length: totalPages }, (_, index) => index +1);
+// wl484: basic pagination logic to make data spread out on multiple pages
     const startIndex = ( currentPage - 1) * pageSize;
-    const endIndex = startIndex + pageSize;
-    const currentPageData = dataRows.slice(startIndex, endIndex);
+    const endIndex = Math.min(startIndex + pageSize, filteredData.length);
+    const currentPageData = filteredData.slice(startIndex, endIndex);
 
     const goToPage = ( pageNumber ) => {
         setCurrentPage( pageNumber );
     };
+// wl484: set the page number to only number needed 
+    const startPage = Math.max(1, currentPage - Math.floor(maxDisplayedPages / 2));
+    const endPage = Math.min(startPage + maxDisplayedPages - 1, totalPages);
 // wl484: the following is what will display in screen itself
     return (
     
@@ -71,15 +86,15 @@ function CsvReader() {
                 > 
                 </input>
             </div> 
-            <span>Precise Search Example: 0000 block Philly Ave</span>
+            <span className="textSample">Precise Search Example: 0000 block Philly Ave</span>
             <br></br>
-            <span>General Search Example: Philly Ave</span>
+            <span className="textSample">General Search Example: Philly Ave</span>
             {/* Author: Weihao Li, 4/21/24 - check if condition are meet and if meet display the map*/}
             {showData && filteredData.length > 0 && <DataMap filteredData={filteredData} />}
             {/* wl484: displays the filtered outputs into table format using rows */}
-            <table>
+            <table className="dataTable">
                 <tbody>
-                    {filteredData.map((row, rowIndex) => (
+                    {currentPageData.map((row, rowIndex) => (
                         <tr key={rowIndex}>
                             {row.map((cell, cellIndex) => (
                                 <td key={cellIndex}>{cell}</td>
@@ -89,9 +104,24 @@ function CsvReader() {
                 </tbody>
             </table>
             {/* wl484: displays message if user inputted invalid location name that doesn't match any dataset */}
-            <div>
+            {showData && filteredData.length === 0 && (
+                <p className="noSearchResult">No Crime Data found on this location.</p>
+            )}
+{/* From ChatGPT, 5/05/24 */}
+{/* Modified by Weihao Li, 5/05/24 */}
+            <div className="pageContainer">
+{/* wl484: button logic that goes back one page */}
                 <button disabled={currentPage === 1} onClick={() => goToPage(currentPage -1)}>Previous</button>
-                <span>Page {currentPage} of {Math.ceil(dataRows.length / pageSize)}</span>
+{/* wl484: the new index and React.Fragment are use to display ... to inform user of the collapse pages*/}
+                {pages.slice(startPage - 1, endPage).map((page, index) => (
+                <span className="pageNumber" key={page}>
+                    {index === 0 && startPage > 1 && <span className="ellipsis">...</span>}
+{/* wl484: applied a class Name to the current page button */}
+                    <button className={currentPage === page ? "currentPage" : ""} onClick={() => goToPage(page)}>{page}</button>
+                    {index === endPage - startPage && endPage <totalPages && <span className="ellipsis">...</span>}
+                </span>
+                ))}
+{/* wl484: button logic that move forward one page*/}
                 <button disabled={currentPage === Math.ceil(dataRows.length / pageSize)} onClick={() => goToPage(currentPage + 1)}>Next</button>
             </div>
         </div>
