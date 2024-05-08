@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css';
 
 const Home = () => {
+    const [scrollCount, setScrollCount] = useState(0);
+    const [nextTarget, setNextTarget] = useState('HomeHeading2'); // Initialize to first target
+
     useEffect(() => {
-        // Existing Intersection Observer setup
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -17,7 +19,6 @@ const Home = () => {
         const elements = document.querySelectorAll('.home-heading');
         elements.forEach(el => observer.observe(el));
 
-        // Function to toggle dark mode based on scroll position
         const toggleBackground = () => {
             const homeElement = document.querySelector('.home');
             if (window.scrollY > window.innerHeight * 0.5) {
@@ -27,29 +28,44 @@ const Home = () => {
             }
         };
 
-        // Add scroll event listener
         window.addEventListener('scroll', toggleBackground);
 
-        // Clean up function
         return () => {
             elements.forEach(el => observer.unobserve(el));
             window.removeEventListener('scroll', toggleBackground);
         };
     }, []);
 
+    const handleScroll = (targetId) => {
+        console.log(`Attempting to scroll to ${targetId}`);
+        const element = document.getElementById(targetId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            setScrollCount(scrollCount + 1);
+            setNextTarget(nextTarget === 'HomeHeading2' ? 'HomeHeading4' : null);
+            console.log(`Scrolled to ${targetId}`);
+        } else {
+            console.log(`Element with ID ${targetId} not found`);
+        }
+    };
+
     return (
         <div className="home">
             <div className="content">
                 <div className="image-container">
-                    {/* Image or content can go here */}
                 </div>
             </div>
             <div id="greeting" className="home-heading">
-                <h2>Welcome To PhillyFeelSafe! You’ve arrived at the Homepage. For any question or suggestions, don't hesitate to click on "Contact Us" in the navigation bar icon.</h2>
+                <h2>Welcome To PhillyFeelSafe! <br></br></h2>
             </div>  
             <div id="HomeHeading1" className="home-heading">
                 <h2>Explore Our Interactive Map:</h2>
                 <a href="/map">Click me!</a>
+                <button className="scroll-button" onClick={() => document.getElementById('HomeHeading2').scrollIntoView({ behavior: 'smooth' })}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 9L12 17L20 9" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            </button>
             </div>
             <div id="HomeHeading2" className="home-heading">
                 <h2>How It Works</h2>
@@ -61,7 +77,7 @@ const Home = () => {
             </div>
             <div id="HomeHeading4" className="home-heading">
                 <h2>About Us</h2>
-                <p>We are Drexel CCI students who joined together in this group to develop the PhillyFeelSafe Website. Our team has diverse backgrounds and experiences, but we all have the same objective and belief in this project. That is to create this quality platform for the users. The team members are Aahil Afraz, Weihao Li, Zarah Malik, and Daniyal Amjed.</p>
+                <p>We are Drexel CCI students who joined together in this group to develop the PhillyFeelSafe Website. Our team has diverse backgrounds and experiences, but we all have the same objective and belief in this project. That is to create this quality platform for the users. The team members are Aahil Afraz, Weihao Li, Zarah Malik, and Daniyal Amjed. For any question or suggestions, don't hesitate to click on "Contact Us" in the navigation bar icon</p>
             </div>
         </div>
     );
