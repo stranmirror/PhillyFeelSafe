@@ -1,7 +1,16 @@
-* {
+:root {
+    --bg-color-light: #ffffff;  /* Example light color */
+    --bg-color-dark: #333333;   /* Example dark color */
+    --text-color-light: #ececec; /* Example light text color */
+}* 
+
+
+
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 html, body {
@@ -30,6 +39,8 @@ html {
 .home {
     min-height: 100vh; 
     height: auto;  
+    background-color: var(--bg-color-light); /* Set the initial background color to light */
+    transition: background-color 0.3s ease; /* Smooth transition for background change */
 } 
 
 
@@ -40,11 +51,27 @@ html {
 
 
 .home-heading {
-    margin-top: 250px; /* More or less as needed */
-    padding: 20px; /* Ensure padding is not causing overflow */
+    margin-top: 100px; /* Reduced from 250px to see if it helps */
+    padding: 20px;
     width: 80%;
     font-size: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, visibility 0.6s;
 }
+
+.home-heading {
+    margin-top: 5vh; /* Adds vertical space before each section */
+    margin-bottom: 5vh; /* Adds vertical space after each section */
+    padding: 4vh 5vw; /* Provides internal spacing within the section */
+    width: 80%; /* Adjust width as needed */
+    text-align: center; /* Centers the text inside the block */
+    font-size: 2rem; /* Adjust base font size as needed */
+    line-height: 1.6; /* Increases the line height for better readability */
+}
+
+
 
 
 .home {
@@ -54,19 +81,7 @@ html {
 }
 
 
-.dark-theme {
-    color: var(--text-color-dark);
-    background-color: var(--bg-color-dark);
-    background: linear-gradient(330deg, rgb(19, 16, 16), transparent); /* Dark gradient */
-}   
 
-
-.home-heading {
-    opacity: 0;
-    transform: translateY(20px);
-    visibility: hidden;
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out, visibility 0.6s;
-}
 
 .home-heading.in-view {
     opacity: 1;
@@ -77,7 +92,7 @@ html {
 
 .home {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -85,10 +100,16 @@ html {
     justify-content: center;
     color: rgb(233, 225, 225);
     text-align: center;
-    padding: 1rem; /* Reduced padding */
+    padding: 1rem; /* Keep an eye on this padding, it adds to the height */
     font-family: "Saira", sans-serif;
     background-color: rgb(0, 0, 0);
     background: linear-gradient(330deg, rgb(19, 16, 16), transparent);
+    overflow: hidden; /* Check if this is necessary */
+}
+
+
+.dark-mode {
+    background-color: var(--bg-color-dark);
 }
 
 .home::before {
@@ -107,25 +128,6 @@ html {
 }
 
 
-
-:root {
-    --text-color-light: #000;   /* Dark text for light background */
-    --bg-color-light: #fff;     /* White background for light theme */
-    --text-color-dark: #fff;    /* White text for dark background */
-    --bg-color-dark: #333;      /* Dark background for dark theme */
-}
-
-body {
-    color: var(--text-color-light);
-    background-color: var(--bg-color-light);
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.dark-theme {
-    color: var(--text-color-dark);
-    background-color: var(--bg-color-dark);
-}
-
 #title {
     font-size: 5rem; /* Adjusted font size */
     color: rgb(0, 0, 0); /* Enhanced visibility */
@@ -134,6 +136,29 @@ body {
 p, h2 {
     color: white; /* Ensures text is visible against the background */
 }
+
+
+
+.home-heading h2 {
+    font-size: 2.3rem; /* Larger font size for headings */
+    color: #fff; /* Adjust color to fit your design */
+    margin-bottom: 2rem; /* Space between heading and any text or elements below */
+}
+
+.home-heading p {
+    font-size: 1.2rem; /* Adjust paragraph font size */
+    max-width: 60%; /* Contain the paragraph width for readability */
+    margin: auto; /* Centers the paragraph in the block */
+}
+
+
+.home-heading {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically within the section */
+}
+
 
 .rounded-image {
     width: 150px;
@@ -168,14 +193,26 @@ p, h2 {
     filter: drop-shadow(0 0 2em #00e73eaa);
 }
 
-@media (max-width: 1024px) {
-    #title {
+
+
+
+@media (max-width: 768px) {
+    .home-heading {
+        padding: 10vh 10vw;
+        font-size: 1.5rem;
+    }
+
+    .home-heading h2 {
         font-size: 2rem;
+    }
+
+    .home-heading p {
+        font-size: 1rem;
     }
 }
 
-@media (max-width: 768px) {
-    #title {
-        font-size: 1.5rem;
-    }
-}
+
+
+
+
+

@@ -1,20 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './Home.css';
 
 const Home = () => {
-    const [isDark, setIsDark] = useState(false);  // State to manage dark mode based on scroll
-
     useEffect(() => {
-        const handleScroll = () => {
-            // Toggle dark mode based on scroll position (you can adjust the condition as needed)
-            const shouldBeDark = window.scrollY > window.innerHeight / 2;
-            setIsDark(shouldBeDark);
-        };
-
-        // Set up scroll event listener
-        window.addEventListener('scroll', handleScroll);
-
-        // Intersection Observer for animations
+        // Existing Intersection Observer setup
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -25,26 +14,38 @@ const Home = () => {
             });
         });
 
-        // Observe all elements with the 'home-heading' class
         const elements = document.querySelectorAll('.home-heading');
         elements.forEach(el => observer.observe(el));
 
+        // Function to toggle dark mode based on scroll position
+        const toggleBackground = () => {
+            const homeElement = document.querySelector('.home');
+            if (window.scrollY > window.innerHeight * 0.5) {
+                homeElement.classList.add('dark-mode');
+            } else {
+                homeElement.classList.remove('dark-mode');
+            }
+        };
+
+        // Add scroll event listener
+        window.addEventListener('scroll', toggleBackground);
+
         // Clean up function
         return () => {
-            window.removeEventListener('scroll', handleScroll);
             elements.forEach(el => observer.unobserve(el));
+            window.removeEventListener('scroll', toggleBackground);
         };
     }, []);
 
     return (
-        <div className={`home ${isDark ? 'dark-theme' : ''}`}>
+        <div className="home">
             <div className="content">
                 <div className="image-container">
                     {/* Image or content can go here */}
                 </div>
             </div>
             <div id="greeting" className="home-heading">
-                <h2>Welcome User! You’ve arrived at the PhillyFeelSafe Website Homepage. Feel free to scroll down and discover our website! You can also click any text on the navigation bar to direct you to your preferred webpage destination. For any question or suggestions, don't hesitate to click on "Contact Us" in the navigation bar icon.</h2>
+                <h2>Welcome To PhillyFeelSafe! You’ve arrived at the Homepage. For any question or suggestions, don't hesitate to click on "Contact Us" in the navigation bar icon.</h2>
             </div>  
             <div id="HomeHeading1" className="home-heading">
                 <h2>Explore Our Interactive Map:</h2>
@@ -67,3 +68,4 @@ const Home = () => {
 };
 
 export default Home;
+
