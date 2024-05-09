@@ -1,5 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup, LayersControl } from "react-leaflet";
-import "./App.css";
+import './App.css';
+import './map.css';
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import Mylocation from "./UserLocation";
@@ -19,13 +20,13 @@ const defaultIcon = new L.Icon.Default();
 //aa4763  = wrote the bottom  5 functions for custom icons on specific pinpoints on our map
 const drexelIcon = new L.Icon({
     iconUrl: drexelIconImg,
-    iconSize: [60, 65],
+    iconSize: [50, 55],
 });
 
 
 const upennIcon = new L.Icon({ 
     iconUrl: upennIconImg,
-    iconSize: [80, 65], 
+    iconSize: [70, 55], 
 });
 
 
@@ -36,22 +37,22 @@ const templeIcon = new L.Icon({
 
 const chinatownIcon = new L.Icon({ 
     iconUrl: chinatownIconImg,
-    iconSize: [140, 130], 
+    iconSize: [100, 100], 
 });
 
 const villageIcon = new L.Icon({ 
     iconUrl: villageIconImg,
-    iconSize: [40, 40], 
+    iconSize: [30, 30], 
 });
 
 const rittenhouseIcon = new L.Icon({ 
     iconUrl: rittenhouseIconImg,
-    iconSize: [50, 50], 
+    iconSize: [40, 40], 
 });
 
 const oldcityIcon = new L.Icon({ 
     iconUrl: oldcityIconImg,
-    iconSize: [60, 60], 
+    iconSize: [40, 40], 
 });
 
 
@@ -69,11 +70,7 @@ const markers = [
                      </p>
         
 
-    }
-    
-    
-    
-    ,
+    },
     {
         position: [39.92524827111099, -75.17163903260402],
         popUp: 'South Philadelphia',
@@ -187,6 +184,8 @@ const Map = () => {
     };
     
     return (
+        <div className="background"> 
+            
         <div>
             <img src= "/Images/Website Logo.png" alt=""/>
             <div id="Research">
@@ -265,7 +264,7 @@ const Map = () => {
                 <Mylocation onLocationUpdate={handleUserLocation} />
             </div>
         </div>
-                        
+        </div>              
     ); 
 };  
 export default Map;    

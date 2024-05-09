@@ -29,3 +29,63 @@
     height: 1.85rem;
     width: auto;
 }
+/* zfm24 = Added image background to map.jsx */
+.background1 {
+   
+    background: url('src/Images/Map.png');
+    padding-bottom: 100%;
+       
+} 
+/* wl484: the following pageContainer class is for the paging function styling */
+.pageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+}
+
+.pageContainer button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.pageContainer button:hover {
+    background-color: #e0e0e0;
+}
+
+.pageContainer .pageNumber {
+    margin: 0;
+    padding: 0;
+}
+
+.pageContainer .currentPage {
+    background-color: #007bff;
+    color: #fff
+}
+
+.pageContainer .currentPage:hover {
+    background-color: #007bff;
+}
+.pageContainer .ellipsis {
+    margin: 0 2px;
+    color: white;
+}
+/* wl484: this section of code set the data table being displayed */
+.dataTable {
+    color: white;
+
+}
+.textSample {
+    color:white;
+}
+/* wl484: this is the styling of the message for no matching result */
+.noSearchResult {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}

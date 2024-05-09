@@ -1,0 +1,8 @@
+ 
+ /* zfm24 = Added image background to map.jsx */
+ .background {
+   
+    background: url('src/Images/Map.png');
+    
+} 
+

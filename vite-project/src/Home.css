@@ -1,134 +1,267 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+    --bg-color-light: #ffffff;  /* Example light color */
+    --bg-color-dark: #333333;   /* Example dark color */
+    --text-color-light: #ececec; /* Example light text color */
+}* 
+
+
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
 }
-
-
-
 
 html, body {
-  overflow-x: hidden;  /* Prevent horizontal scrolling */
+    height: 100%; /* Ensure these are not exceeding 100% */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide horizontal overflow if not necessary */
+    overflow-y: auto; /* Ensure single vertical scroll */
+    font-size: 14px;
+
+}
+
+body, html {
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+    
+}
+
+ 
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+.home {
+    min-height: 100vh; 
+    height: auto;  
+    background-color: var(--bg-color-light); /* Set the initial background color to light */
+    transition: background-color 0.3s ease; /* Smooth transition for background change */
+} 
+
+
+.home-heading h2, .home-heading p {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-size: 24px;
+}
+
+
+.home-heading {
+    margin-top: 100px; /* Reduced from 250px to see if it helps */
+    padding: 20px;
+    width: 80%;
+    font-size: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, visibility 0.6s;
+}
+
+.home-heading {
+    margin-top: 5vh; /* Adds vertical space before each section */
+    margin-bottom: 5vh; /* Adds vertical space after each section */
+    padding: 4vh 5vw; /* Provides internal spacing within the section */
+    width: 80%; /* Adjust width as needed */
+    text-align: center; /* Centers the text inside the block */
+    font-size: 2rem; /* Adjust base font size as needed */
+    line-height: 1.6; /* Increases the line height for better readability */
+}
+
+
+
+
+.home {
+    /* Existing styles */
+    color: var(--text-color-light);  /* Switch to light text initially */
+    background-color: var(--bg-color-light); /* Switch to light background initially */
+}
+
+
+
+
+.home-heading.in-view {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
 }
 
 
 .home {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: rgb(233, 225, 225);
-  text-align: center;
-  padding: 50px 20px;
-  font-family: "Saira", sans-serif;
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(233, 225, 225);
+    text-align: center;
+    padding: 1rem; /* Keep an eye on this padding, it adds to the height */
+    font-family: "Saira", sans-serif;
+    background-color: rgb(0, 0, 0);
+    background: linear-gradient(330deg, rgb(19, 16, 16), transparent);
+    overflow: hidden; /* Check if this is necessary */
 }
 
 
-
+.dark-mode {
+    background-color: var(--bg-color-dark);
+}
 
 .home::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('./Images/skyline.jpg') no-repeat center center fixed;
-  background-size: cover;
-  /* Apply the blur and darken effects here */
-  filter: blur(4px);
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: darken;
-  z-index: -1; /* Ensures it stays behind the content */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./Images/skyline.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    z-index: -1;
 }
 
 
-
-
-/* wl484: set body of home page into a gradient color */
-.home {
-  font-size: 30px;
-  background-color: rgb(0, 0, 0);
-  background:linear-gradient(330deg, rgb(19, 16, 16), transparent);
-}
-
-
-
-  /* wl484: this css refers to the PhillyFeelSafe Title */
 #title {
-  font-size: 90px;
-  font-family: "Saira", sans-serif;
-  font-style: normal;
-  font-weight:375;
-  color: rgb(0, 0, 0);
+    font-size: 5rem; /* Adjusted font size */
+    color: rgb(0, 0, 0); /* Enhanced visibility */
+}
+
+p, h2 {
+    color: white; /* Ensures text is visible against the background */
 }
 
 
 
+.home-heading h2 {
+    font-size: 3.2rem; /* Larger font size for headings */
+    color: #fff; /* Adjust color to fit your design */
+    margin-bottom: 2rem; /* Space between heading and any text or elements below */
+}
+
+.home-heading p {
+    font-size: 1.2rem; /* Adjust paragraph font size */
+    max-width: 60%; /* Contain the paragraph width for readability */
+    margin: auto; /* Centers the paragraph in the block */
+}
 
 
+.home-heading {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically within the section */
+}
 
+.home-heading {
+    text-align: center; /* Centers text and all inline elements within the container */
+}
 
 
 .rounded-image {
-  width: 150px; /* Adjust the width and height as needed */
-  height: 150px;
-  border-radius: 50%; /* Make the image circular */
-  border: 7px solid black; /* Optional: Add a border */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 7px solid black;
 }
 
-p {
-  font-size: 32px;
-  text-align: center;
-  font-family: "Varela Round", sans-serif;
+#HomeHeading1, #HomeHeading2, #HomeHeading3, #HomeHeading4 {
+    text-align: center;
+    margin-top: 100px; /* Adds spacing between sections */
+    width: 70%; /* Controls width of the text block */
+    margin-left: auto;
+    margin-right: auto;
 }
+
+#greeting {
+    margin-bottom: 20px; /* Reduced space below the 'Welcome' heading */
+}
+
 #HomeHeading1 {
-  text-align: center;
- 
+    margin-top: 20px; /* Reduced space above the 'Explore Our Interactive Map' heading */
 }
-h2 {
-  font-family: "Saira", sans-serif;
-  font-style: normal;
-  font-size: 40px;
-}
-/* wl484: each # of heading represent the bolded text*/
-#HomeHeading2 {
-  text-align: left;
-  margin: 40px;
-}
-#HomeHeading3 {
-  text-align: left;
-  margin: 20px;
-}
-#HomeHeading4 {
-  text-align: left;
-  margin-right: 20px;
-  margin-left: 20px;
-}
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #256400aa);
-}
-.logo.react:hover {
- filter: drop-shadow(0 0 2em #00e73eaa);
 
+
+
+.scroll-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
 }
-/* wl484: this css refers to the PhillyFeelSafe Title */
-#title {
-  font-size: 90px;
-  font-family: "Saira", sans-serif;
-  font-style: normal;
-  font-weight:375;
-  color: rgb(0, 0, 0);
+
+
+.logo {
+    height: 2em;
+    padding: 1.1em;
+    will-change: filter;
+    transition: filter 200ms;
 }
+
+.logo:hover {
+    filter: drop-shadow(0 0 2em #256400aa);
+}
+
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #00e73eaa);
+}
+
+
+
+
+@media (max-width: 768px) {
+    .home-heading {
+        padding: 10vh 10vw;
+        font-size: 1.5rem;
+    }
+
+    .home-heading h2 {
+        font-size: 2rem;
+    }
+
+    .home-heading p {
+        font-size: 1rem;
+    }
+}
+
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  
+ 
+  .scroll-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px; /* Keeps the button in a consistent location */
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    animation: bounce 2s infinite;
+}
+
 
 
 
