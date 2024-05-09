@@ -82,7 +82,8 @@ State if you are open to contributions and what your requirements are for accept
 For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
 
 You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
+## Quick Start 
+Learn and use React to create a website for better-organized coding storage. First, make sure "git command" and "node.js" are installed on the local machine, then download an integrated development environment (IDE), such as Visual Studio Code, to complete the process. Open Visual Studio Code, enter the project directory and edit the Home.jsx (jsx is HTML in react). Then, open the Command-line interface (CLI) built-in IDE and cd into the project directory. Use the command "npm run dev" in the CLI to show the localhost links and test in the local browser. 
 ## Authors and acknowledgment
 Thank you to the authors of the project: Zarah Malik, Weihao Li, Aahil Afraz, and Daniyal Amjed.
 Additionally, thank you to Professor Pirmann and both of our Scrum Masters for their assistance in producing our project!
