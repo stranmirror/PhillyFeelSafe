@@ -19,6 +19,55 @@
 }
 
 
+p {
+  font-size: 32px;
+  text-align: center;
+  font-family: "Varela Round", sans-serif;
+}
+#HomeHeading1 {
+  text-align: center;
+  
+}
+h2 {
+  font-family: "Saira", sans-serif;
+  font-style: normal;
+  font-size: 40px;
+}
+/* wl484: each # of heading represent the bolded text*/
+#HomeHeading2 {
+  text-align: left;
+  margin: 20px;
+}
+#HomeHeading3 {
+  text-align: left;
+  margin: 20px;
+}
+#HomeHeading4 {
+  text-align: left;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #256400aa);
+}
+.logo.react:hover {
+ filter: drop-shadow(0 0 2em #00e73eaa);
+
+}
+/* wl484: this css refers to the PhillyFeelSafe Title */
+#title {
+  font-size: 90px;
+  font-family: "Saira", sans-serif;
+  font-style: normal;
+  font-weight:375;
+  color: rgb(41, 92, 165);
+}
 #main-icon {
   text-align: center;
   background-color: black;
@@ -88,21 +137,26 @@
 .Popup_size {
   width: 300 px;
   padding: 0px; /* Adjust the padding to change the size of the popup */
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  background-color: #0e0c0c;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   font-size: 14px; /* Adjust the font size as needed */
+}
+
+.popup_color {
+  background-color: white;
+  
 }
 
 /* CSS styles for the text inside the popup */
 .Popup_size h1 {
   font-size: 24px; /* Adjust the font size of heading */
+  color: black;
 }
 
 
 .Popup_size p {
   font-size: 15px; /* Adjust the font size of paragraph */
+  color: black;
 }
 
 .DataMap {
@@ -141,7 +195,7 @@
 .popup-image {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 90%;
 }
 .Referencelinks{
   text-align: center;

@@ -9,29 +9,26 @@ import './reference.css';
              <div>
                 <br></br>
             <div className="links">
-                <a href="https://www.visitphilly.com/areas/philadelphia-neighborhoods">https://www.visitphilly.com/areas/philadelphia-neighborhoods</a>
+                <a href="https://www.visitphilly.com/areas/philadelphia-neighborhoods">Visit Philly neighborhoods</a>
                 <br></br>
-                <a href="https://drexel.edu/life-at-drexel/campus-safety">https://drexel.edu/life-at-drexel/campus-safety</a>
                 <br></br>
-                <a href="https://drexel.edu/life-at-drexel/campus-safety">https://drexel.edu/life-at-drexel/campus-safety</a>
+                <a href="https://drexel.edu/life-at-drexel/campus-safety">View more about Drexel's campus safety</a>
                 <br></br>
-                <a href="https://www.publicsafety.upenn.edu/safety-initiatives/pennguardian/">https://www.publicsafety.upenn.edu/safety-initiatives/pennguardian/</a>
                 <br></br>
-                <a href="https://safety.temple.edu/tualert/tusafe">https://safety.temple.edu/tualert/tusafe</a>
+                <a href="https://www.publicsafety.upenn.edu/safety-initiatives/pennguardian/">View more about University of Pennsylvania's campus safety</a>
                 <br></br>
-                <a href="https://www.niche.com/places-to-live/n/rittenhouse-philadelphia-pa/#crime-safety">https://www.niche.com/places-to-live/n/rittenhouse-philadelphia-pa/#crime-safety</a>
                 <br></br>
-                <a href="https://www.movoto.com/guide/philadelphia-pa/fairmount-park-philadelphia-neighborhood">https://www.movoto.com/guide/philadelphia-pa/fairmount-park-philadelphia-neighborhood</a>
+                <a href="https://safety.temple.edu/tualert/tusafe">View more about Temple University's campus safety</a>
                 <br></br>
-                <a href="https://www.niche.com/places-to-live/n/queen-village-philadelphia-pa/">https://www.niche.com/places-to-live/n/queen-village-philadelphia-pa/</a>
                 <br></br>
-                <a href="https://www.movoto.com/guide/philadelphia-pa/chinatown-philadelphia-neighborhood/">https://www.movoto.com/guide/philadelphia-pa/chinatown-philadelphia-neighborhood/</a>
+                <a href="https://www.niche.com/places-to-live/search/best-places-to-live/m/philadelphia-metro-area/">Explore more safe housing options through Niche</a>
                 <br></br>
-                <a href="https://www.niche.com/places-to-live/n/old-city-philadelphia-pa/">https://www.niche.com/places-to-live/n/old-city-philadelphia-pa/</a>
                 <br></br>
-                <a href="https://www.veryapt.com/guides/neighborhood/6-philadelphia-old-city/">https://www.veryapt.com/guides/neighborhood/6-philadelphia-old-city/</a>
+                <a href="https://www.movoto.com/">Buy a home through Movoto</a>
                 <br></br>
-                <a href="https://www.veryapt.com/guides/neighborhood/6-philadelphia-old-city/">https://www.veryapt.com/guides/neighborhood/6-philadelphia-old-city/</a>
+                <br></br>
+                <a href="https://www.veryapt.com/Apartments-L122-philadelphia">Look for safe housing options through VeryApt</a>
+                <br></br>
                 <br></br>
             </div>
              </div>
