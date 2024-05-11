@@ -137,7 +137,11 @@ p, h2 {
     color: white; /* Ensures text is visible against the background */
 }
 
-
+#HomeHeading1 a,
+.home-heading a {
+    color: rgb(159, 222, 234);
+    /* Optionally, you can add other styles like text-decoration: none; for removing underline */
+}
 
 .home-heading h2 {
     font-size: 3.2rem; /* Larger font size for headings */
