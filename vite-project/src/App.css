@@ -202,4 +202,16 @@ h2 {
   font-size: 24px;
 }
 
-
+/* wl484: this section set the cluster icon that wrap the pinpoints when zoom out*/
+.cluster-icon {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: white;
+  transform: translate(-25%, -25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
