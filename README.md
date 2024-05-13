@@ -18,14 +18,15 @@ https://nodejs.org/en/ install guide for node.js
 
 The following commands are used to install dependencies for our project. VERY IMPORTANT: Ensure you are in the vite-project folder before running install commands. All dependencies are neccessary for running the project without any error!
 
-npm i -D react-router-dom 
-npm install leaflet
-npm install react-leaflet
-npm install react-icons --save
-npm install leaflet-providers
-npm install react-leaflet-cluster
-npm install papaparse
-npm install leaflet.locatecontrol
+- npm i -D react-router-dom 
+- npm install leaflet
+- npm install react-leaflet
+- npm install react-icons --save
+- npm install leaflet-providers
+- npm install react-leaflet-cluster
+- npm install papaparse
+- npm install leaflet.locatecontrol
+
 
 ## Add your files
 
