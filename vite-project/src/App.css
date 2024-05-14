@@ -137,21 +137,26 @@ h2 {
 .Popup_size {
   width: 300 px;
   padding: 0px; /* Adjust the padding to change the size of the popup */
-  background-color: #fff;
-  border: 1px solid #f9f7f7;
-  border-radius: 5px;
+  background-color: #0e0c0c;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   font-size: 14px; /* Adjust the font size as needed */
+}
+
+.popup_color {
+  background-color: white;
+  
 }
 
 /* CSS styles for the text inside the popup */
 .Popup_size h1 {
   font-size: 24px; /* Adjust the font size of heading */
+  color: black;
 }
 
 
 .Popup_size p {
   font-size: 15px; /* Adjust the font size of paragraph */
+  color: black;
 }
 
 .DataMap {
@@ -197,4 +202,16 @@ h2 {
   font-size: 24px;
 }
 
-
+/* wl484: this section set the cluster icon that wrap the pinpoints when zoom out*/
+.cluster-icon {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: white;
+  transform: translate(-25%, -25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: 1.5rem;
+}

@@ -4,6 +4,7 @@ import './map.css';
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import Mylocation from "./UserLocation";
+import MarkerClusterGroup from 'react-leaflet-cluster';
 import React, { useState } from 'react';
 import userLocationIconUrl from "./Images/userLocation.png";
 import drexelIconImg from "./Images/drexelmarker.png";
@@ -65,8 +66,9 @@ const markers = [
         
         position: [39.986829339542545, -75.21110223998414],
         popUp: 'West Philadelphia',
-        description: <p>According to many trustable sites, West Philadelphia is safer than 7 percent of neighborhoods in the entire United States. West Philadelphia has around 200-637 residents. There are about 81 violent crime rates, 231 property crime rates, and around 312 crimes in the neighborhood. West Philadelphia does have a higher drug rate at 0.26 compared to other neighborhoods in Philadelphia. We would give it 1 out of 5 ⭐️'s. 
-                     <img src="https://t4.ftcdn.net/jpg/02/98/16/63/240_F_298166336_4Z8JfBEFGDAWZf625kzvYZz8Cvrm80s3.jpg" alt="1 out of 5 stars" width="200" />'
+        description: <p>According to many trustable sites, West Philadelphia is safer than 7 percent of neighborhoods in the entire United States. West Philadelphia has around 200-637 residents. There are about 81 violent crime rates, 231 property crime rates, and around 312 crimes in the neighborhood. West Philadelphia does have a higher drug rate at 0.26 compared to other neighborhoods in Philadelphia. 
+                     <br></br><b>Our Rating:</b><br></br>
+                     <img src={'src/Images/1Rating.png'} alt="1 out of 5 stars" width="200" />
                      </p>
         
 
@@ -75,8 +77,9 @@ const markers = [
         position: [39.92524827111099, -75.17163903260402],
         popUp: 'South Philadelphia',
 
-        description: <p>South Philly is known to be really dangerous. It is 43% above national average of total crime. South Philly is known to be really bad for violent crime. It is 93% worse than the national average of violent crime. Property crime would be at 34% above national average. 1 out of 30 residents have a chance of becoming a victim of crime. It is not a very safe neighborhood. We would give it 0 out of 5 ⭐️'s.
-                    <img src="https://t4.ftcdn.net/jpg/02/98/16/63/240_F_298166326_gITi0WtGFpaoX5mAv8oQscXIoilpVtm2.jpg" alt="0 out of 5 stars" width="200" />'
+        description:<p>South Philly is known to be really dangerous. It is 43% above national average of total crime. South Philly is known to be really bad for violent crime. It is 93% worse than the national average of violent crime. Property crime would be at 34% above national average. 1 out of 30 residents have a chance of becoming a victim of crime. It is not a very safe neighborhood. 
+                    <br></br><b>Our Rating:</b><br></br>
+                    <img src={'src/Images/0Rating.png'} alt="0 out of 5 stars" width="200"/>
                     </p>
 
     },
@@ -84,8 +87,9 @@ const markers = [
         position: [39.964951146087856, -75.19798834216576],
         popUp: 'Mantua',
 
-        description: <p>Mantua has a population of 8,238 people. Mantua is lower than the national average when it comes to assault! When it comes to murder, Mantua is a bit higher than the national average. The national average being 6.1 per 100,000 residents. In Mantua it would be 9. Mantua is somewhat safe. Police are very visible in Mantua as well as very responsive. We would give it 3 out of 5 ⭐️'s.
-                    <img src="https://t4.ftcdn.net/jpg/02/98/16/63/240_F_298166352_tlyPez9gIIkUIPe8gX1qQaur42YC5Zjo.jpg" alt="3 out of 5 stars" width="200" />'
+        description:<p>Mantua has a population of 8,238 people. Mantua is lower than the national average when it comes to assault! When it comes to murder, Mantua is a bit higher than the national average. The national average being 6.1 per 100,000 residents. In Mantua it would be 9. Mantua is somewhat safe. Police are very visible in Mantua as well as very responsive. 
+                    <br></br><b>Our Rating:</b><br></br>
+                    <img src={'src/Images/3Rating.png'}  alt="3 out of 5 stars" width="200"/>
                     </p>
 
     },
@@ -93,8 +97,9 @@ const markers = [
         position: [39.950431552151805, -75.2203727251815],
         popUp: 'Cedar Park',
 
-        description: <p>Cedar Park is a very safe place. It has a population of 7,922 people. Cedar Park has very low rates compared to the national average when it comes to assault, murder, rape, robbery, burglary, theft, and motor-vehicle theft. Cedar Park  would be safe compared to many other neighborhoods surrounding University Park. We would give it 4 out of 5 ⭐️'s.
-                    <img src="https://as2.ftcdn.net/v2/jpg/02/98/16/63/1000_F_298166355_BvfU0450lPRi51CNc2DKaPiEuujvn5Op.jpg" alt="4 out of 5 stars" width="200" />'
+        description:<p>Cedar Park is a very safe place. It has a population of 7,922 people. Cedar Park has very low rates compared to the national average when it comes to assault, murder, rape, robbery, burglary, theft, and motor-vehicle theft. Cedar Park  would be safe compared to many other neighborhoods surrounding University Park. 
+                    <br></br><b>Our Rating:</b><br></br>
+                    <img src={'src/Images/4Rating.png'} alt="4 out of 5 stars" width="200" />
                     </p>
 
     },
@@ -102,8 +107,9 @@ const markers = [
         position: [39.9609193940143, -75.19265863481958],
         popUp: 'Powelton Village',
 
-        description: <p>Powelton Village is a completely safe place to live and many students live in the area. However, the neighborhood is known for its Victorian homes and historical significance. Many student live in Powelton Village. It has a population of 4,236. Powelton is one of the safest places to live in Pennsylvania.  It is a part of University City and has a mix of both local residents and college students. It is very safe. The national average of assault is 282.7 out of 100,000 residents. Powelton Village has 26.8. Burglary, theft, rape, and murder is not be a problem when living here. We would rate Powelton Village 5 out of 5 ⭐️'s.
-                    <img src="https://as2.ftcdn.net/v2/jpg/02/98/16/63/1000_F_298166362_yFh1SAtWKKltPWdyIHuXwbHw9vrWC1C1.jpg" alt="5 out of 5 stars" width="200" />'
+        description:<p>Powelton Village is a completely safe place to live and many students live in the area. However, the neighborhood is known for its Victorian homes and historical significance. Many student live in Powelton Village. It has a population of 4,236. Powelton is one of the safest places to live in Pennsylvania.  It is a part of University City and has a mix of both local residents and college students. It is very safe. The national average of assault is 282.7 out of 100,000 residents. Powelton Village has 26.8. Burglary, theft, rape, and murder is not be a problem when living here.
+                    <br></br><b>Our Rating:</b><br></br>
+                    <img src={'src/Images/5Rating.png'} alt="5 out of 5 stars" width="200"/>
                     </p>
 
     },
@@ -111,52 +117,66 @@ const markers = [
     {        
         position: [39.9566, -75.1899],
         popUp: 'Drexel University',
-        description: "Drexel strives to create a safe community among campus housing, while providing students with DrexelALERTs around campus through the Drexel Guardian app. This app also provides walking escorts 24/7 for students. Students can stay engaged with campus activities to meet the diverse cultures in Philadelphia! We would give this location 5 out of 5 ⭐️'s."
+        description:<p>Drexel strives to create a safe community among campus housing, while providing students with DrexelALERTs around campus through the Drexel Guardian app. This app also provides walking escorts 24/7 for students. Students can stay engaged with campus activities to meet the diverse cultures in Philadelphia!
+                    <br></br><b>Our Rating:</b><br></br>
+                    <img src={'src/Images/5Rating.png'} alt="5 out of 5 stars" width="200"/>
+                    </p>
     },
     {
         position: [39.95238329006968, -75.19325125092564],
         popUp: 'University of Pennsylvania',
-
-        description: "The University of Pennsylvania has had over 4,500 police escorts for its students and over 650 officers on campus. The university welcomes students and ensures their safety, by sending out UPenn Alerts through the PennGuardian App. We would give this location 5 out of 5 ⭐️'s."
+        description:<p>The University of Pennsylvania has had over 4,500 police escorts for its students and over 650 officers on campus. The university welcomes students and ensures their safety, by sending out UPenn Alerts through the PennGuardian App.
+                    <br></br><b>Our Rating:</b><br></br>
+                    <img src={'src/Images/5Rating.png'} alt="5 out of 5 stars" width="200"/>
+                    </p>
     },
     {
         position: [39.98231769588328, -75.15548913971243],
         popUp: 'Temple University',
-
-        description: "Temple University provides a free annual security report that contains crime-related data by local law enforcement. Community members can also get the TUSafe app on their phone to share your location and share a virtual walk home, in which a campus officer will be closely monitoring your location as you walk home. Even among its recent security concerns, Temple has taken significant actions to overcome safety issues. We would give this location 3 out of 5 ⭐️'s."
+        description:<p>Temple University provides a free annual security report that contains crime-related data by local law enforcement. Community members can also get the TUSafe app on their phone to share your location and share a virtual walk home, in which a campus officer will be closely monitoring your location as you walk home. Even among its recent security concerns, Temple has taken significant actions to overcome safety issues. 
+                    <br></br><b>Our Rating:</b><br></br>
+                    <img src={'src/Images/3Rating.png'} alt="3 out of 5 stars" width="200"/>
+                    </p>
     },
     {
         position: [39.950965755151906, -75.1909202213174],
         popUp: 'Rittenhouse Square',
-
-        description: "Based on many web resources, Rittenhouse Square is one of the safest areas to live in Philadelphia. Out of the U.S. Census, this area is rated #3 out of 143 for 'Best Neightborhoods for Young Professionals in Philadelphia'. We would give this location 5 out of 5 ⭐️'s."
-    
+        description: <p>Based on many web resources, Rittenhouse Square is one of the safest areas to live in Philadelphia. Out of the U.S. Census, this area is rated #3 out of 143 for 'Best Neightborhoods for Young Professionals in Philadelphia'.
+                    <br></br><b>Our Rating:</b><br></br>
+                    <img src={'src/Images/5Rating.png'} alt="5 out of 5 stars" width="200"/>
+                    </p>
     },
     {
         position: [39.96748278374168, -75.1682395727675],
         popUp: 'Fairmount',
-
-        description: "Many college students live in the Fairmount area because of its convenient location near universities. The neighborhood has 1 violent crime and 28 property crimes a year, according to a web resource. We would give this location 4 out of 5 ⭐️'s. "
-
+        description: <p>Many college students live in the Fairmount area because of its convenient location near universities. The neighborhood has 1 violent crime and 28 property crimes a year, according to a web resource.
+                    <br></br><b>Our Rating:</b><br></br>
+                    <img src={'src/Images/4Rating.png'} alt="4 out of 5 stars" width="200"/>
+                    </p>
     },
     {
         position: [39.938749038761976, -75.14965743579471],
         popUp: 'Queen Village',
-
-        description: "In 2021, there were 108 murders reported in Queen Village, but in comparison to other years holding crimes above a thousand, this is a significantly low number. It was rated #2 out of 143 areas for 'Best Neighborhoods to Live in Philadelphia' on a web resource (Niche). We would give this location 4 out of 5 ⭐️'s."
+        description: <p>In 2021, there were 108 murders reported in Queen Village, but in comparison to other years holding crimes above a thousand, this is a significantly low number. It was rated #2 out of 143 areas for 'Best Neighborhoods to Live in Philadelphia' on a web resource (Niche).
+                    <br></br><b>Our Rating:</b><br></br>
+                    <img src={'src/Images/4Rating.png'} alt="4 out of 5 stars" width="200"/>
+                    </p>
     },
     {
         position: [39.95555971628967, -75.15424128158553],
         popUp: 'Chinatown',
-
-        description: "Chinatown is one of the safest areas in near Center City, Philadelphia. This area has 1.02 crimes per 1,000 residents each year. This total is even lower than Pennsylvania's crime rates of 11 crime per 1,000 people. We would give this location 5 out of 5 ⭐️'s."
-
+        description: <p>Chinatown is one of the safest areas in near Center City, Philadelphia. This area has 1.02 crimes per 1,000 residents each year. This total is even lower than Pennsylvania's crime rates of 11 crime per 1,000 people. 
+                    <br></br><b>Our Rating:</b><br></br>
+                    <img src={'src/Images/5Rating.png'} alt="5 out of 5 stars" width="200"/>
+                    </p>
     }, 
     {
         position: [39.95016322756649, -75.14426228162593],
         popUp: 'Old City',
-
-        description: "As it America's independence began here, this is a safe area to live in Philadelphia. Old City is a very beautiful place with local transit, restuarants, stores, etc. We would give this location 5 out of 5 ⭐️'s."
+        description: <p>As it America's independence began here, this is a safe area to live in Philadelphia. Many web sources state that Old City is a very beautiful place with local transit, restuarants, stores, etc. One can feel safe living in the city that are nation was founded in!
+                    <br></br><b>Our Rating:</b><br></br>
+                    <img src={'src/Images/5Rating.png'} alt="5 out of 5 stars" width="200"/>
+                    </p>
     }
     
 
@@ -169,7 +189,15 @@ const markers = [
         iconUrl: userLocationIconUrl,
         iconSize: [60, 60],
     });
-
+// From Alejandro AO Youtube Tutorial at https://youtu.be/jD6813wGdBA?si=yLqG0yKv66FJ9qhb
+// Modified by Weihao Li on 05/12/24
+    const createCustomClusterIcon = (cluster) => {
+        return new L.divIcon ({
+        html: `<div class="cluster-icon">${cluster.getChildCount()}</div>`,
+        className: "custom-marker-cluster",
+        iconSize: L.point(33, 33, true)
+        });
+    } 
 // added variable that sets BaseLayer to Layers Control, allowing user to interact with button on map (referenced from ChatGPT)
 
 const { BaseLayer } = LayersControl;
@@ -223,6 +251,13 @@ const Map = () => {
                         />
                     </BaseLayer>
                 </LayersControl>
+{/* From Alejandro AO 02/06/23 Youtube Tutorial at https://youtu.be/jD6813wGdBA?si=yLqG0yKv66FJ9qhb*/}
+{/* Modified by Weihao Li on 05/12/24 */}
+{/* wl484: Marker Cluster should wrap all the markers*/}
+                <MarkerClusterGroup
+                    chunkedLoading
+                    iconCreateFunction={createCustomClusterIcon}
+                >
                 {/* zfm24 = changed markers format, taken by ChatGPT 3 */}
                 {markers.map(marker => (
                     <Marker key={marker.popUp} position={marker.position} icon={
@@ -241,8 +276,10 @@ const Map = () => {
                     }>
                         {/* aa4763: wrote the code above to replace the defualt icons with custom icons if those places were specifially any of the locations above*/}
                         <Popup className="Popup_size">
+                            <div className = "popup_color">
                             <h1>{marker.popUp}</h1>
-                            <p>{marker.description}</p>            
+                            <p>{marker.description}</p>
+                            </div>            
                         </Popup>
                     </Marker>
                 ))}
@@ -258,6 +295,7 @@ const Map = () => {
                         <Popup> Your Current Location </Popup> 
                     </Marker> 
             )}
+            </MarkerClusterGroup>
             </MapContainer>
 
             <div>
