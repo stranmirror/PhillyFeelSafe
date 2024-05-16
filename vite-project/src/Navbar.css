@@ -1,20 +1,22 @@
-/* wl484: this is the closing icon "X" style*/
+/* Style for the closing icon "X" */
 .menu-bars {
     margin-left: 2rem;
     font-size: 2rem;
     background: none;
     color: rgb(92, 120, 232);
 }
+
+/* Style for the sidebar icon to make it fixed and always visible */
 .menu {
     position: fixed;
     top: 30px;
-    left: 0;
+    left: 10px; /* Adjust as needed */
+    z-index: 1001; /* Ensure it is above other elements */
 }
 
-/* wl484: this part of code set the style of the nav bar container */
-/* wl484: Its also used in the changing state function */
+/* Style for the nav bar container */
 .nav-menu {
-    background-color:white;
+    background-color: white;
     width: 305px;
     height: 100vh;
     display: flex;
@@ -24,14 +26,14 @@
     left: -100%;
     transition: 850ms;
     z-index: 1000;
-
 }
 
 .nav-menu.active {
-    left:0;
+    left: 0;
     transition: 350ms;
 }
 
+/* Style for the nav items */
 .nav-text {
     display: flex;
     justify-content: start;
@@ -41,7 +43,7 @@
     height: 60px;
 }
 
-/* This part set the text itself inside the sidebar*/
+/* Style for the text inside the sidebar */
 .nav-text a {
     color: black;
     font-size: 18px;
@@ -56,14 +58,16 @@
 }
 
 .nav-text a:hover {
-    background-color:rgb(102, 102, 193);
+    background-color: rgb(102, 102, 193);
 }
 
+/* Style for the nav menu items */
 .nav-menu-items {
     width: 100%;
 }
 
-.navbar-toggle  {
+/* Style for the navbar toggle */
+.navbar-toggle {
     background-color: white;
     width: 100%;
     height: 80px;
@@ -76,11 +80,15 @@ span {
     margin-left: 16px;
 }
 
-/* wl484: the classname bars is referring to the bar icon "three lines"*/
+/* Style for the bar icon "three lines" */
 .bars {
     text-align: left;
     height: 80px;
     display: flex;
     justify-content: start;
     align-items: center;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
 }
