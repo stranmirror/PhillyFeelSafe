@@ -8,9 +8,25 @@ To make it easy for you to get started with GitLab, here's a list of recommended
 
 Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
+Begin the project by installing the following working environments:
+
 https://react.dev/learn/add-react-to-an-existing-project install guide for react project
 
 https://nodejs.org/en/ install guide for node.js
+
+## Dependencies 
+
+The following commands are used to install dependencies for our project. VERY IMPORTANT: Ensure you are in the vite-project folder before running install commands. All dependencies are neccessary for running the project without any error!
+
+- npm i -D react-router-dom 
+- npm install leaflet
+- npm install react-leaflet
+- npm install react-icons --save
+- npm install leaflet-providers
+- npm install react-leaflet-cluster
+- npm install papaparse
+- npm install leaflet.locatecontrol
+
 
 ## Add your files
 
@@ -57,7 +73,7 @@ When you're ready to make this README your own, just edit this file and use the 
 Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
 ## Name
-Choose a self-explaining name for your project.
+PhillyFeelSafe Website
 
 ## Description
 Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.

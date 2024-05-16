@@ -43,9 +43,9 @@ const contact = () => {
             </div>
         </div>
         <div className="ContactHeading4">
-            <h1>Daniyal Amjed - Crime Information Rater</h1>
+            <h1>Daniyal Amjed - HTML Designer</h1>
             <h1>Email: da894@drexel.edu</h1>
-            <h1><br></br>I am a freshman at Drexel University and my major is Software Engineering. I plan to work for one of the leading tech companies of today. </h1>
+            <h1><br></br>I am a freshman at Drexel University and I am a Software Engineering major. My goal is to excel in multiple programming languages like Java, Python, and C#. </h1>
             </div>   
         </div>
         <br></br>

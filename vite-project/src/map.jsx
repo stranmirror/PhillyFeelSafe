@@ -4,6 +4,7 @@ import './map.css';
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import Mylocation from "./UserLocation";
+import MarkerClusterGroup from 'react-leaflet-cluster';
 import React, { useState } from 'react';
 import userLocationIconUrl from "./Images/userLocation.png";
 import drexelIconImg from "./Images/drexelmarker.png";
@@ -188,7 +189,15 @@ const markers = [
         iconUrl: userLocationIconUrl,
         iconSize: [60, 60],
     });
-
+// From Alejandro AO Youtube Tutorial at https://youtu.be/jD6813wGdBA?si=yLqG0yKv66FJ9qhb
+// Modified by Weihao Li on 05/12/24
+    const createCustomClusterIcon = (cluster) => {
+        return new L.divIcon ({
+        html: `<div class="cluster-icon">${cluster.getChildCount()}</div>`,
+        className: "custom-marker-cluster",
+        iconSize: L.point(33, 33, true)
+        });
+    } 
 // added variable that sets BaseLayer to Layers Control, allowing user to interact with button on map (referenced from ChatGPT)
 
 const { BaseLayer } = LayersControl;
@@ -242,6 +251,13 @@ const Map = () => {
                         />
                     </BaseLayer>
                 </LayersControl>
+{/* From Alejandro AO 02/06/23 Youtube Tutorial at https://youtu.be/jD6813wGdBA?si=yLqG0yKv66FJ9qhb*/}
+{/* Modified by Weihao Li on 05/12/24 */}
+{/* wl484: Marker Cluster should wrap all the markers*/}
+                <MarkerClusterGroup
+                    chunkedLoading
+                    iconCreateFunction={createCustomClusterIcon}
+                >
                 {/* zfm24 = changed markers format, taken by ChatGPT 3 */}
                 {markers.map(marker => (
                     <Marker key={marker.popUp} position={marker.position} icon={
@@ -279,6 +295,7 @@ const Map = () => {
                         <Popup> Your Current Location </Popup> 
                     </Marker> 
             )}
+            </MarkerClusterGroup>
             </MapContainer>
 
             <div>

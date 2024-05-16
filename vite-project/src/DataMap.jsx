@@ -1,6 +1,8 @@
 import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup, LayersControl } from 'react-leaflet';
 import "./App.css";
+import L from "leaflet";
+import MarkerClusterGroup from 'react-leaflet-cluster';
 //From ChatGPT, 4/21/24
 //Modified by Weihao Li, 4/21/24
 function DataMap ({ filteredData }) {
@@ -12,6 +14,17 @@ function DataMap ({ filteredData }) {
 
         return !isNaN(latitude) && !isNaN(longitude);
     });
+// From Alejandro AO Youtube Tutorial at https://youtu.be/jD6813wGdBA?si=yLqG0yKv66FJ9qhb
+// Modified by Weihao Li on 05/12/24
+    const createCustomClusterIcon = (cluster) => {
+// wl484: replaced divIcon to L.divIcon corresponding to the import from leaflet
+        return new L.divIcon ({
+// wl484: this html attribute sets the displaying information on the cluster icon
+        html: `<div class="cluster-icon">${cluster.getChildCount()}</div>`,
+        className: "custom-marker-cluster",
+        iconSize: L.point(33, 33, true)
+        });
+    } 
 
     return (
         
@@ -39,6 +52,13 @@ function DataMap ({ filteredData }) {
                         />
                     </LayersControl.BaseLayer>
                 </LayersControl>
+{/* From Alejandro AO 02/06/23 Youtube Tutorial at https://youtu.be/jD6813wGdBA?si=yLqG0yKv66FJ9qhb*/}
+{/* Modified by Weihao Li on 05/12/24 */}
+{/* wl484: Marker Cluster should wrap all the markers*/}
+            <MarkerClusterGroup
+                chunkedLoading
+                iconCreateFunction={createCustomClusterIcon}
+            >
                 {validData.map((data,index) => (
                     <Marker 
                     key={index} 
@@ -53,6 +73,7 @@ function DataMap ({ filteredData }) {
                         </Popup>
                     </Marker>
                 ))}
+            </MarkerClusterGroup>
             </MapContainer>
         </div>
     
