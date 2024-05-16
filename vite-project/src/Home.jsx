@@ -74,6 +74,11 @@ const Home = () => {
             <div id="HomeHeading3" className="home-heading">
                 <h2>Why We Created It</h2>
                 <p>The purpose of this website is to serve as a totally free 24-hour guide that helps you feel secure and connected with the local community. Our platform aims to provide you with the safest, most reliable, and most convenient tools to achieve this goal.</p>
+                <button className="scroll-button" onClick={() => document.getElementById('HomeHeading4').scrollIntoView({ behavior: 'smooth' })}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 9L12 17L20 9" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            </button>
             </div>
             <div id="HomeHeading4" className="home-heading">
                 <h2>About Us</h2>
