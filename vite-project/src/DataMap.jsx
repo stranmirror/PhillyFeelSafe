@@ -40,7 +40,7 @@ function DataMap ({ filteredData }) {
                             maxZoom={20}
                             ext="png" 
                         />
-                        {/* aa4763 followed a similar format from map.jsx file which was implemented by Zahra*/}
+                        {/* aa4763 followed a similar format from map.jsx file which was implemented by Zarah*/}
                     </LayersControl.BaseLayer>
                     <LayersControl.BaseLayer name="Light Mode">
                         <TileLayer 
