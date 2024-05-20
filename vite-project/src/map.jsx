@@ -177,9 +177,102 @@ const markers = [
                     <br></br><b>Our Rating:</b><br></br>
                     <img src={'src/Images/5Rating.png'} alt="5 out of 5 stars" width="200"/>
                     </p>
-    }
-    
+    },
 
+    //zfm24 = Added hospitals, police stations, restaurants, and stores - need to change icons!
+    {
+
+        position: [39.950295716962906, -75.19392581968305],
+        popUp: 'Hospital of the University of Pennsylvania'
+    },
+    {
+
+        position: [39.94886617019046, -75.19390254666787], 
+        popUp: 'Childrens Hospital of Philadelphia'
+
+
+    }, 
+    {
+
+        position: [39.948296997935024, -75.19391863766259],
+        popUp: 'Childrens Hospital of Philadelphia Emergency Room'
+
+    },
+    {
+
+        position: [39.954755240621566, -75.19316254921597],
+        popUp: 'Oberholtzer John Carl MD See See Hospital'
+    },
+    {
+
+        position: [39.947877522417514, -75.19267409269861],
+        popUp: 'Perelman Center for Advanced Medicine'
+    },
+    {
+        position: [39.96200346168633, -75.20033728899523],
+        popUp: 'Philadelphia Police 16th District' 
+
+    },
+    {
+        position: [39.956121700607106, -75.18240620433913],
+        popUp: 'Amtrak Police Department'
+    }, 
+    {
+        position: [39.95593478058187, -75.2036057516323],
+        popUp: 'University of Pennsylvania Police'
+    }, 
+    {
+
+        position: [39.957792448458825, -75.1883336043391], 
+        popUp: 'Drexel University Police'
+    },
+    {
+        position: [39.95447947774627, -75.23297710619056],
+        popUp: 'Philadelphia Police 18th District'
+    },
+    {
+        position: [39.95628300400261, -75.19062863132376],
+        popUp: 'Landmark Americana University'
+    },
+    {
+
+        position: [39.95205212526518, -75.20333270124172],
+        popUp: 'Copabanana University City Restaurant'
+    },
+    {
+        position: [39.95442913228152, -75.19004010433929],
+        popUp: 'CO-OP Restaurant & Bar'
+    },
+    {
+        position: [39.95585915673524, -75.20177771783152],
+        popUp: 'Dim Sum House Restaurant'
+    },
+    {
+        position: [39.9541777731053, -75.18930287735466],
+        popUp: 'Lascalas Fire Restaurant'
+    },
+    {
+        position: [39.95399058192388, -75.18865611783167],
+        popUp: 'Shake Shack Restaurant'
+    },
+    { 
+        position: [39.952217584546325, -75.16774104666762],
+        popUp: 'Liberty Place Shopping Mall'
+    },
+    {
+
+        position: [39.9537423069022, -75.19647934666757],
+        popUp: 'Hello World Modern Mercantile'
+    },
+    {
+        position: [39.95033186545078, -75.16867718899596],
+        popUp: 'Urban Outfitters'
+    },
+    {
+        position: [39.95369978524196, -75.19631446201109],
+        popUp: 'Philadelphia Runner Shopping Store'
+
+    }
     ];
 
 
@@ -272,6 +365,28 @@ const Map = () => {
                         marker.popUp === "Fairmount" ? villageIcon :
                         marker.popUp === "Mantua" ? villageIcon :
                         marker.popUp === "Old City" ? oldcityIcon :
+                        //zfm24 = Added hospitals, police stations, restaurants, and stores - CHANGE ICONS HERE!
+                        marker.popUp === "Hospital of the University of Pennsylvania" ? defaultIcon :
+                        marker.popUp === "Childrens Hospital of Philadelpha" ? defaultIcon : 
+                        marker.popUp === "Childrens Hospital of Philadelphia Emergency Room" ? defaultIcon :
+                        marker.popUp === "Oberholtzer John Carl MD See See Hospital" ? defaultIcon : 
+                        marker.popUp === "Perelman Center for Advanced Medicine" ? defaultIcon : 
+                        marker.popUp === "Philadelphia Police 16th District" ? defaultIcon :  
+                        marker.popUp === "Amtrak Police Department" ? defaultIcon : 
+                        marker.popUp === "University of Pennsylvania Police" ? defaultIcon :
+                        marker.popUp === "Drexel University Police" ? defaultIcon : 
+                        marker.popUp === "Philadelphia Police 18th District" ? defaultIcon : 
+                        marker.popUp === "Landmark Americana University" ? defaultIcon : 
+                        marker.popUp === "Copabanana University City Restaurant" ? defaultIcon : 
+                        marker.popUp === "CO-OP Restaurant & Bar" ? defaultIcon : 
+                        marker.popUp === "Dim Sum House Restaurant" ? defaultIcon : 
+                        marker.popUp === "Lascalas Fire Restaurant" ? defaultIcon :
+                        marker.popUp === "Shake Shack Restaurant" ? defaultIcon : 
+                        marker.popUp === "Liberty Place Shopping Mall" ? defaultIcon : 
+                        marker.popUp === "Hello World Modern Mercantile" ? defaultIcon : 
+                        marker.popUp === "Urban Outfitters" ? defaultIcon : 
+                        marker.popUp === "Philadelphia Runner Shopping Store" ? defaultIcon : 
+                                              
                         defaultIcon
                     }>
                         {/* aa4763: wrote the code above to replace the defualt icons with custom icons if those places were specifially any of the locations above*/}
