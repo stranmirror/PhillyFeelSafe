@@ -207,7 +207,7 @@ h2 {
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
-  background-color: white;
+  background-color: rgb(132, 232, 247);
   transform: translate(-25%, -25%);
   display: flex;
   justify-content: center;
