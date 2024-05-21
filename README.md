@@ -6,12 +6,12 @@
 Learn and use React to create a website for better-organized coding storage. First, make sure "git command" and "node.js" are installed on the local machine, then download an integrated development environment (IDE), such as Visual Studio Code, to complete the process. Open Visual Studio Code, enter the project directory and edit the Home.jsx (jsx is HTML in react). Then, open the Command-line interface (CLI) built-in IDE and cd into the project directory. Use the command "npm run dev" in the CLI to show the localhost links and test in the local browser. 
 
 Begin the project by installing the following working environments:
-Other crucial installation are listed under "Installation" header
 
 https://react.dev/learn/add-react-to-an-existing-project install guide for react project
 
-https://nodejs.org/en/ install guide for node.js
+https://nodejs.org/en/ install guide for node.js\
 
+Other crucial installation are listed under "**Installation**" header
 
 ## Add your files
 
@@ -102,7 +102,28 @@ Thank you to the authors of the project: Zarah Malik, Weihao Li, Aahil Afraz, an
 Additionally, thank you to Professor Pirmann and both of our Scrum Masters for their assistance in producing our project!
 
 ## License
-For open source projects, say how it is licensed.
+MIT License
+
+Copyright (c) 2024 Zarah Malik, Weihao Li, Aahil Afraz, and Daniyal Amjed
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
 
 ## Project status
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
