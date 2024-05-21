@@ -3,29 +3,14 @@
 
 
 ## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+Learn and use React to create a website for better-organized coding storage. First, make sure "git command" and "node.js" are installed on the local machine, then download an integrated development environment (IDE), such as Visual Studio Code, to complete the process. Open Visual Studio Code, enter the project directory and edit the Home.jsx (jsx is HTML in react). Then, open the Command-line interface (CLI) built-in IDE and cd into the project directory. Use the command "npm run dev" in the CLI to show the localhost links and test in the local browser. 
 
 Begin the project by installing the following working environments:
+Other crucial installation are listed under ## Installation
 
 https://react.dev/learn/add-react-to-an-existing-project install guide for react project
 
 https://nodejs.org/en/ install guide for node.js
-
-## Dependencies 
-
-The following commands are used to install dependencies for our project. VERY IMPORTANT: Ensure you are in the vite-project folder before running install commands. All dependencies are neccessary for running the project without any error!
-
-- npm i -D react-router-dom 
-- npm install leaflet
-- npm install react-leaflet
-- npm install react-icons --save
-- npm install leaflet-providers
-- npm install react-leaflet-cluster
-- npm install papaparse
-- npm install leaflet.locatecontrol
 
 
 ## Add your files
@@ -85,7 +70,16 @@ On some READMEs, you may see small images that convey metadata, such as whether 
 Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+The following commands are used to install dependencies for our project. VERY IMPORTANT: Ensure you are in the vite-project folder before running install commands. All dependencies are neccessary for running the project without any error!
+
+- npm i -D react-router-dom 
+- npm install leaflet
+- npm install react-leaflet
+- npm install react-icons --save
+- npm install leaflet-providers
+- npm install react-leaflet-cluster
+- npm install papaparse
+- npm install leaflet.locatecontrol
 
 ## Usage
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
@@ -102,8 +96,7 @@ State if you are open to contributions and what your requirements are for accept
 For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
 
 You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-## Quick Start 
-Learn and use React to create a website for better-organized coding storage. First, make sure "git command" and "node.js" are installed on the local machine, then download an integrated development environment (IDE), such as Visual Studio Code, to complete the process. Open Visual Studio Code, enter the project directory and edit the Home.jsx (jsx is HTML in react). Then, open the Command-line interface (CLI) built-in IDE and cd into the project directory. Use the command "npm run dev" in the CLI to show the localhost links and test in the local browser. 
+
 ## Authors and acknowledgment
 Thank you to the authors of the project: Zarah Malik, Weihao Li, Aahil Afraz, and Daniyal Amjed.
 Additionally, thank you to Professor Pirmann and both of our Scrum Masters for their assistance in producing our project!
