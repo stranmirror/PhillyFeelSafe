@@ -84,6 +84,15 @@ The following commands are used to install dependencies for our project. VERY IM
 ## Usage
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
+## Debug/troubleshooting 
+For any merge conflict issues, refer to source control and determine which version to keep. There should be new options: current change and incoming change. Double-check with the git repository before picking which one to keep. After the merge conflict for source control shows no errors, push your change with a git commit message. 
+
+If the terminal shows work that the local copy doesn't contain and refuses your git push for any changes, run the command "git pull origin main" to update the directory with the current git repo.
+
+If the terminal shows work that the local copy doesn't contain and refuses your git push for any changes, run the command "git pull origin main" to update the directory with the current git repo. Remember always to use the command "git status" to check the status of files. Any files in red are waiting for a git add to be committed, and any files in green are included in the git add but haven't been git pushed with the git commit message. 
+
+If the browser console issue shows a 404 not found error for any dependency even after the npm install and checking the package existence, use the command "rm -rf node_modules/.vite && npm run dev." This command allows rebuilding the node_modules folder while keeping all dependencies and clearing all cache. Then, it opens the website again using npm run dev. Make sure to use this command in the vite-project folder.  
+
 ## Support
 Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
 
