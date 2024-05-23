@@ -359,7 +359,6 @@ const Map = () => {
                         marker.popUp === 'Temple University' ? templeIcon :
                         marker.popUp === "Chinatown" ? chinatownIcon :
                         marker.popUp.toLowerCase().includes('village') ? villageIcon :
-                        marker.popUp.toLowerCase().includes('philadelphia') ? villageIcon :
                         marker.popUp === "Rittenhouse Square" ? rittenhouseIcon :
                         marker.popUp === "Cedar Park" ? rittenhouseIcon :
                         marker.popUp === "Fairmount" ? villageIcon :
