@@ -415,7 +415,8 @@ const Map = () => {
                         marker.popUp === "Liberty Place Shopping Mall" ? shoppingIcon : 
                         marker.popUp === "Hello World Modern Mercantile" ? shoppingIcon : 
                         marker.popUp === "Urban Outfitters" ? shoppingIcon : 
-                        marker.popUp === "Philadelphia Runner Shopping Store" ? shoppingIcon : 
+                        marker.popUp === "Philadelphia Runner Shopping Store" ? shoppingIcon :
+                        marker.popUp === "Childrens Hospital of Philadelphia" ? hospitalIcon :  
                                               
                         defaultIcon
                     }>
