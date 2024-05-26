@@ -5,6 +5,8 @@ import * as BiIcons from 'react-icons/bi';
 import DataMap from './DataMap';
 
 function CsvReader() {
+// wl484: added new headers constants to fetch new data
+    const [headers, setHeaders] = useState([]);
     const [dataRows, setDataRows] = useState([]);
 // wl484: added serveal new constants to set different useState (displaying vs not displaying) 
     const [searchTerm, setSearchTerm] = useState('');
@@ -23,7 +25,9 @@ function CsvReader() {
             .then(text => {
                 // Split text by newlines and then by commas to get rows and cells
                 const rows = text.split('\n').map(row => row.split(','));
-                setDataRows(rows);
+                // feching header data from csv file row 0 
+                setHeaders(rows[0]);
+                setDataRows(rows.slice(1));
             })
             .catch(error => console.error('Error fetching CSV file:', error));
     }, []);
@@ -64,7 +68,9 @@ function CsvReader() {
     const currentPageData = filteredData.slice(startIndex, endIndex);
 
     const goToPage = ( pageNumber ) => {
+        if (pageNumber >= 1 && pageNumber <= totalPages) { //wl484: added new logic to ensure pageNumber is within the range
         setCurrentPage( pageNumber );
+        }
     };
 // wl484: set the page number to only number needed 
     const startPage = Math.max(1, currentPage - Math.floor(maxDisplayedPages / 2));
@@ -92,7 +98,19 @@ function CsvReader() {
             {/* Author: Weihao Li, 4/21/24 - check if condition are meet and if meet display the map*/}
             {showData && filteredData.length > 0 && <DataMap filteredData={filteredData} />}
             {/* wl484: displays the filtered outputs into table format using rows */}
+    {showData && (
+//wl484: added conditional rendering to render the table and header only when user input valid value
+       <div className="tableContainer">
             <table className="dataTable">
+                <thead>
+                    <tr>
+{/* wl484: set headers using new fetched header data*/}
+                        {headers.map((header,index) => (
+                            <th key={index}>{header}</th>
+                        ))}
+                    </tr>
+                </thead>
+{/* wl484: the rest of data showing in data table */}
                 <tbody>
                     {currentPageData.map((row, rowIndex) => (
                         <tr key={rowIndex}>
@@ -103,6 +121,8 @@ function CsvReader() {
                     ))}
                 </tbody>
             </table>
+        </div>
+       )}
             {/* wl484: displays message if user inputted invalid location name that doesn't match any dataset */}
             {showData && filteredData.length === 0 && (
                 <p className="noSearchResult">No Crime Data found on this location.</p>
@@ -124,7 +144,14 @@ function CsvReader() {
 {/* wl484: button logic that move forward one page*/}
                 <button disabled={currentPage === Math.ceil(dataRows.length / pageSize)} onClick={() => goToPage(currentPage + 1)}>Next</button>
             </div>
+{/* wl484: information for psa */}
+            {showData && (
+            <p id="psa">PSA or Police Service Area is a designated geographic area for local policing. For more information click here: 
+                <a className="psaLink" href="https://districts.phillypolice.com/" target="_blank">https://districts.phillypolice.com/</a>
+            </p>
+            )}
         </div>
+    
         
 
     );
