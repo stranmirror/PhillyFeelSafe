@@ -3,3 +3,16 @@
     background: url('src/Images/Map.png');
        
 } 
+
+.DataMap {
+    text-align: center;
+    align-items: center;
+    width: auto;
+}
+.leaflet-container {
+    height: 100vh;
+    border-style: groove;
+    border-radius: 45px;
+    border-width: 10px;
+}
+  
