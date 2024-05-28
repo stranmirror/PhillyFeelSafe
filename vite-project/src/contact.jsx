@@ -81,9 +81,16 @@ return (
                 </svg>
             </button>
         </div>
+        {/* zfm24= Edited descriptions for each member and their contributions */}
             <h1>Zarah Malik - Product Owner</h1>
             <h1>Email: zfm24@drexel.edu</h1>
-            <h1><br></br>I am a freshman at Drexel University and my major is Data Science. I am dedicated towards technology innovation and making it accessible for all users.</h1>
+            <h1><i>Data Science Student at Drexel's College of Computing and Informatics</i></h1>
+            <h1><br></br>Main Contributions:</h1>
+            <ul>
+                <li>Envisioning website's visual representation</li> 
+                <li>Creating pinpoints for safe housing options on map feature</li>
+                <li>Finding reference links for housing options</li>
+            </ul>
         </div>
 
         <div id="ContactHeading2" className="contact-heading">
@@ -98,7 +105,14 @@ return (
         </div>
             <h1>Weihao Li - Website Function Developer</h1>
             <h1>Email: wl484@drexel.edu</h1>
-            <h1><br></br>I am a freshman at Drexel University and my major is Cyber Security and Technology. I am interested in working on securing data for users to access. </h1>
+            <h1><i>Cyber Security Student at Drexel's College of Computing and Informatics</i></h1>
+            <h1><br></br>Main Contributions: </h1>
+            <ul>
+                <li>Creating map feature showing history of crime data</li>
+                <li> Spreading data onto multiple pages</li>
+                <li>Showing user's location on map feature</li>
+            </ul>
+                
             <div>
             <br></br>
             </div>
@@ -116,7 +130,14 @@ return (
         </div>
             <h1>Aahil Afraz - Website Style Designer</h1>
             <h1>Email: aa4763@drexel.edu</h1>
-            <h1><br></br>I am a freshman at Drexel University and my major is Software Engineering. My goal is learn a few programming languages like C++, R, and Python. </h1>
+            <h1><i>Software Engineer Student at Drexel's College of Computing and Informatics</i></h1>
+            <h1><br></br>Main Contributions: </h1>
+            <ul>
+                <li>Styling website background theme to be visually pleasing</li>
+                <li>Creating icons for pinpoints on map feature </li>
+                <li>Creating animations for user interactivity </li>
+
+            </ul>
             <div>
             <br></br>
             </div>
@@ -133,7 +154,13 @@ return (
         </div>
             <h1>Daniyal Amjed - HTML Designer</h1>
             <h1>Email: da894@drexel.edu</h1>
-            <h1><br></br>I am a freshman at Drexel University and I am a Software Engineering major. My goal is to excel in multiple programming languages like Java, Python, and C#. </h1>
+            <h1><i>Software Engineer Student at Drexel's College of Computing and Informatics</i></h1>
+            <h1><br></br>Main Contributions: </h1>
+            <ul>
+                <li>Creating logo for website representation</li>
+                <li>Adding rating for each housing option</li>
+                <li>Finding safe housing options to be displayed on map feature</li>
+            </ul>
             </div>   
         </div>   
  );

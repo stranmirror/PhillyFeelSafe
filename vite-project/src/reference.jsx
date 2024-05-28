@@ -34,26 +34,28 @@ const Reference = () => {
         <div>
           <br></br>
           <div className="links">
-            <a href="https://www.visitphilly.com/areas/philadelphia-neighborhoods" className="external-link">https://www.visitphilly.com/areas/philadelphia-neighborhoods</a>
+            <a href="https://www.visitphilly.com/areas/philadelphia-neighborhoods" className="external-link">Visit Philly Neighborhoods</a>
             <br></br>
-            <a href="https://drexel.edu/life-at-drexel/campus-safety" className="external-link">https://drexel.edu/life-at-drexel/campus-safety</a>
             <br></br>
-            <a href="https://www.publicsafety.upenn.edu/safety-initiatives/pennguardian/" className="external-link">https://www.publicsafety.upenn.edu/safety-initiatives/pennguardian/</a>
+            <a href="https://drexel.edu/life-at-drexel/campus-safety" className="external-link">View more about Drexel's campus safety</a>
             <br></br>
-            <a href="https://safety.temple.edu/tualert/tusafe" className="external-link">https://safety.temple.edu/tualert/tusafe</a>
             <br></br>
-            <a href="https://www.niche.com/places-to-live/n/rittenhouse-philadelphia-pa/#crime-safety" className="external-link">https://www.niche.com/places-to-live/n/rittenhouse-philadelphia-pa/#crime-safety</a>
+            <a href="https://www.publicsafety.upenn.edu/safety-initiatives/pennguardian/" className="external-link">View more about University of Pennsylvania's campus safety</a>
             <br></br>
-            <a href="https://www.movoto.com/guide/philadelphia-pa/fairmount-park-philadelphia-neighborhood" className="external-link">https://www.movoto.com/guide/philadelphia-pa/fairmount-park-philadelphia-neighborhood</a>
             <br></br>
-            <a href="https://www.niche.com/places-to-live/n/queen-village-philadelphia-pa/" className="external-link">https://www.niche.com/places-to-live/n/queen-village-philadelphia-pa/</a>
+            <a href="https://safety.temple.edu/tualert/tusafe" className="external-link">View more about Temple University's campus safety</a>
             <br></br>
-            <a href="https://www.movoto.com/guide/philadelphia-pa/chinatown-philadelphia-neighborhood/" className="external-link">https://www.movoto.com/guide/philadelphia-pa/chinatown-philadelphia-neighborhood/</a>
             <br></br>
-            <a href="https://www.niche.com/places-to-live/n/old-city-philadelphia-pa/" className="external-link">https://www.niche.com/places-to-live/n/old-city-philadelphia-pa/</a>
+            <a href="https://www.niche.com/places-to-live/search/best-places-to-live/m/philadelphia-metro-area/" className="external-link">Explore more safe housing options through Niche</a>
             <br></br>
-            <a href="https://www.veryapt.com/guides/neighborhood/6-philadelphia-old-city/" className="external-link">https://www.veryapt.com/guides/neighborhood/6-philadelphia-old-city/</a>
             <br></br>
+            <a href="https://www.movoto.com/" className="external-link">Buy a home through Movoto</a>
+            <br></br>
+            <br></br>
+            <a href="https://www.veryapt.com/" className="external-link">Look for safe housing options through VeryApt</a>
+            <br></br>
+            <br></br>
+          
           </div>
         </div>
       </div>

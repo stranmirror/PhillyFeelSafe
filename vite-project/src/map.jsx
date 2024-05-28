@@ -14,7 +14,11 @@ import chinatownIconImg from "./Images/chinatown.png";
 import villageIconImg from "./Images/village.png";
 import rittenhouseIconImg from "./Images/rittenhouse.png";
 import oldcityIconImg from "./Images/oldcity.png";
-
+import hospitalIconImg from "./Images/hospital.png"
+import shoppingIconImg from "./Images/mall.png"
+import policeIconImg from "./Images/police.png"
+import foodIconImg from "./Images/food.png"
+import westIconImg from "./Images/west.png"
 
 const defaultIcon = new L.Icon.Default();
 
@@ -56,6 +60,31 @@ const oldcityIcon = new L.Icon({
     iconSize: [40, 40], 
 });
 
+const hospitalIcon = new L.Icon({ 
+    iconUrl: hospitalIconImg,
+    iconSize: [50, 50], 
+});
+
+const shoppingIcon = new L.Icon({ 
+    iconUrl: shoppingIconImg,
+    iconSize: [150, 90], 
+});
+
+const policeIcon = new L.Icon({ 
+    iconUrl: policeIconImg,
+    iconSize: [50, 50], 
+});
+
+const foodIcon = new L.Icon({ 
+    iconUrl: foodIconImg,
+    iconSize: [55, 50], 
+});
+
+const westIcon = new L.Icon({ 
+    iconUrl: westIconImg,
+    iconSize: [125, 120], 
+});
+
 
 
 // zfm24 = wrote in pinpoints for map, taking longitude and latitude coordinates from Google Maps, and labeling it within the pop-up
@@ -65,7 +94,7 @@ const markers = [
     {
         
         position: [39.986829339542545, -75.21110223998414],
-        popUp: 'West Philadelphia',
+        popUp: 'West Philadlphia',
         description: <p>According to many trustable sites, West Philadelphia is safer than 7 percent of neighborhoods in the entire United States. West Philadelphia has around 200-637 residents. There are about 81 violent crime rates, 231 property crime rates, and around 312 crimes in the neighborhood. West Philadelphia does have a higher drug rate at 0.26 compared to other neighborhoods in Philadelphia. 
                      <br></br><b>Our Rating:</b><br></br>
                      <img src={'src/Images/1Rating.png'} alt="1 out of 5 stars" width="200" />
@@ -364,27 +393,30 @@ const Map = () => {
                         marker.popUp === "Fairmount" ? villageIcon :
                         marker.popUp === "Mantua" ? villageIcon :
                         marker.popUp === "Old City" ? oldcityIcon :
+                        marker.popUp === "West Philadlphia" ? westIcon :
+                        marker.popUp === "South Philadelphia" ? westIcon :
                         //zfm24 = Added hospitals, police stations, restaurants, and stores - CHANGE ICONS HERE!
-                        marker.popUp === "Hospital of the University of Pennsylvania" ? defaultIcon :
-                        marker.popUp === "Childrens Hospital of Philadelpha" ? defaultIcon : 
-                        marker.popUp === "Childrens Hospital of Philadelphia Emergency Room" ? defaultIcon :
-                        marker.popUp === "Oberholtzer John Carl MD See See Hospital" ? defaultIcon : 
-                        marker.popUp === "Perelman Center for Advanced Medicine" ? defaultIcon : 
-                        marker.popUp === "Philadelphia Police 16th District" ? defaultIcon :  
-                        marker.popUp === "Amtrak Police Department" ? defaultIcon : 
-                        marker.popUp === "University of Pennsylvania Police" ? defaultIcon :
-                        marker.popUp === "Drexel University Police" ? defaultIcon : 
-                        marker.popUp === "Philadelphia Police 18th District" ? defaultIcon : 
-                        marker.popUp === "Landmark Americana University" ? defaultIcon : 
-                        marker.popUp === "Copabanana University City Restaurant" ? defaultIcon : 
-                        marker.popUp === "CO-OP Restaurant & Bar" ? defaultIcon : 
-                        marker.popUp === "Dim Sum House Restaurant" ? defaultIcon : 
-                        marker.popUp === "Lascalas Fire Restaurant" ? defaultIcon :
-                        marker.popUp === "Shake Shack Restaurant" ? defaultIcon : 
-                        marker.popUp === "Liberty Place Shopping Mall" ? defaultIcon : 
-                        marker.popUp === "Hello World Modern Mercantile" ? defaultIcon : 
-                        marker.popUp === "Urban Outfitters" ? defaultIcon : 
-                        marker.popUp === "Philadelphia Runner Shopping Store" ? defaultIcon : 
+                        marker.popUp === "Hospital of the University of Pennsylvania" ? hospitalIcon :
+                        marker.popUp === "Childrens Hospital of Philadelpha" ? hospitalIcon : 
+                        marker.popUp === "Childrens Hospital of Philadelphia Emergency Room" ? hospitalIcon :
+                        marker.popUp === "Oberholtzer John Carl MD See See Hospital" ? hospitalIcon : 
+                        marker.popUp === "Perelman Center for Advanced Medicine" ? hospitalIcon : 
+                        marker.popUp === "Philadelphia Police 16th District" ? policeIcon :  
+                        marker.popUp === "Amtrak Police Department" ? policeIcon : 
+                        marker.popUp === "University of Pennsylvania Police" ? policeIcon :
+                        marker.popUp === "Drexel University Police" ? policeIcon : 
+                        marker.popUp === "Philadelphia Police 18th District" ? policeIcon : 
+                        marker.popUp === "Landmark Americana University" ? foodIcon : 
+                        marker.popUp === "Copabanana University City Restaurant" ? foodIcon : 
+                        marker.popUp === "CO-OP Restaurant & Bar" ? foodIcon : 
+                        marker.popUp === "Dim Sum House Restaurant" ? foodIcon : 
+                        marker.popUp === "Lascalas Fire Restaurant" ? foodIcon :
+                        marker.popUp === "Shake Shack Restaurant" ? foodIcon : 
+                        marker.popUp === "Liberty Place Shopping Mall" ? shoppingIcon : 
+                        marker.popUp === "Hello World Modern Mercantile" ? shoppingIcon : 
+                        marker.popUp === "Urban Outfitters" ? shoppingIcon : 
+                        marker.popUp === "Philadelphia Runner Shopping Store" ? shoppingIcon :
+                        marker.popUp === "Childrens Hospital of Philadelphia" ? hospitalIcon :  
                                               
                         defaultIcon
                     }>

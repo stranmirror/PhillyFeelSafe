@@ -69,7 +69,7 @@ const Home = () => {
             </div>
             <div id="HomeHeading2" className="home-heading">
                 <h2>How It Works</h2>
-                <p>You will be taken to our actual digital map webpage by clicking on this interactive map model. Our interactive digital map will allow you to check on the safety level of various neighborhoods. You can simply click on the specific area you want to discover, which displays all the information you want to know, including any housing option. Our safety level is averagely summed up into 1 to 5 stars (1 extremely dangerous and 5 very safe). This level is fixable according to the crime history.</p>
+                <p>You will be taken to our actual digital map webpage by clicking on this interactive map model. Our interactive digital map will allow you to check on the safety level of various neighborhoods. You can simply click on the specific area you want to discover, which displays all the information you want to know, including potential housing options. Our safety level is represented through a rating from 0 to 5 stars (0 extremely dangerous and 5 very safe).</p>
             </div>
             <div id="HomeHeading3" className="home-heading">
                 <h2>Why We Created It</h2>
@@ -82,7 +82,7 @@ const Home = () => {
             </div>
             <div id="HomeHeading4" className="home-heading">
                 <h2>About Us</h2>
-                <p>We are Drexel CCI students who joined together in this group to develop the PhillyFeelSafe Website. Our team has diverse backgrounds and experiences, but we all have the same objective and belief in this project. That is to create this quality platform for the users. The team members are Aahil Afraz, Weihao Li, Zarah Malik, and Daniyal Amjed. For any question or suggestions, don't hesitate to click on "Contact Us" in the navigation bar icon</p>
+                <p>We are Drexel CCI students who joined together in this group to develop the PhillyFeelSafe Website. Our team has diverse backgrounds and experiences, but we all have the same objective to create a helpful crime history website for end-users. The team members are  Zarah Malik, Weihao Li, Aahil Afraz, and Daniyal Amjed. For any question or suggestions, please reach out to us on our Contact Us page!</p>
             </div>
         </div>
     );
