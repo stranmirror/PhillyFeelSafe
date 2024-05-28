@@ -27,11 +27,11 @@ h2 {
 }
 /* reference.css */
 .external-link:visited {
-    color: blue;
+    color: rgb(83, 138, 239);
   }
   
 /* reference.css */
 .external-link:visited, .external-link.visited-link {
-    color: blue;
+    color: rgb(83, 138, 239);
   }
   
