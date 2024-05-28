@@ -25,3 +25,13 @@ h2 {
     color: rgb(169, 206, 219); 
     font-size: 30px;
 }
+/* reference.css */
+.external-link:visited {
+    color: blue;
+  }
+  
+/* reference.css */
+.external-link:visited, .external-link.visited-link {
+    color: blue;
+  }
+  

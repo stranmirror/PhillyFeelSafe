@@ -6,9 +6,12 @@ const Reference = () => {
     const handleExternalLinkClick = (event) => {
       const confirmMessage =
         'You are about to leave this website. Are you sure you want to proceed?';
-      
+
       if (!window.confirm(confirmMessage)) {
         event.preventDefault();
+      } else {
+        // Add a class to change the link color after it is clicked
+        event.target.classList.add('visited-link');
       }
     };
 
