@@ -61,13 +61,8 @@ Every project is different, so consider which of these sections apply to yours. 
 PhillyFeelSafe Website
 
 ## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+Welcome to the PhillyFeelSafe website! This website will provide you with all the information you need to consider a safe housing option in University City, Philadelphia, PA. Use our map feature to locate housing options, and see what's nearby! Through our map feature, you can see nearby restaurants, shopping malls, police stations, hospitals, etc. available in the area that you are interested in. Additionally, you can also see the crime history that has taken place within a specific location in the past year, by providing a block number or street name. This will be displayed on a map, with each pinpoint displaying the type of crime that took place. You can also scroll down to see more history in our crime history data table. Want to search more about housing options? Navigate to the reference links page to find some helpful links! Finally, learn more about the website developers and their contributions to this website project. Visit the PhillyFeelSafe Website TODAY! 
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
 ## Installation
 The following commands are used to install dependencies for our project. VERY IMPORTANT: Ensure you are in the vite-project folder before running install commands. All dependencies are neccessary for running the project without any error!
@@ -82,7 +77,9 @@ The following commands are used to install dependencies for our project. VERY IM
 - npm install leaflet.locatecontrol
 
 ## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+Click on specific pinpoints in our map feature to see a description and a safety level rating from our team to see how safe an area is. You can also click on nearby restaurants, shopping malls, police stations, and hospitals to see their names. 
+
+To view the crime history, you can click on pinpoints after searching a specific location. This will tell you the location of the pinpoint, along with the type of crime that took place. 
 
 ## Debug/troubleshooting 
 For any merge conflict issues, refer to source control and determine which version to keep. There should be new options: current change and incoming change. Double-check with the git repository before picking which one to keep. After the merge conflict for source control shows no errors, push your change with a git commit message. 
@@ -92,21 +89,32 @@ If the terminal shows work that the local copy doesn't contain and refuses your 
 If the browser console issue shows a 404 not found error for any dependency even after the npm install and checking the package existence, use the command "rm -rf node_modules/.vite && npm run dev." This command allows rebuilding the node_modules folder while keeping all dependencies and clearing all cache. Then, it opens the website again using npm run dev. Make sure to use this command in the vite-project folder.  
 
 ## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+Contact the website developers for assistance and/or feedback:
+- Zarah Malik (Product Owner)
+    Email: zfm24@drexel.edu
+- Weihao Li (Function Developer)
+    Email: wl463@drexel.edu
+- Aahil Afraz (CSS Styling Designer)
+    Email: aa4763@drexel.edu
+- Daniyal Amjed (HTML Designer)
+    Email: da894@drexel.edu
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+## Contributing/Start-Up
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+To access the website in React, in your local IDE, assuming that you are in the CI-102-lab-63-group-14 folder and in the vite-project folder, type the command:
+npm run dev 
+
+This will provide you with a local link to access the website. 
+
 
 You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
 
 ## Authors and acknowledgment
 Thank you to the authors of the project: Zarah Malik, Weihao Li, Aahil Afraz, and Daniyal Amjed.
 Additionally, thank you to Professor Pirmann and both of our Scrum Masters for their assistance in producing our project!
+
+This project also used a crime history CSV file located on Kaggle for public use (located here: https://www.kaggle.com/datasets/mchirico/philadelphiacrimedata). Thank you Kaggle for providing this useful data set to display on our website! 
 
 ## License
 MIT License
@@ -133,4 +141,4 @@ SOFTWARE.
 
 
 ## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Complete 
