@@ -119,7 +119,7 @@ This project also used a crime history CSV file located on Kaggle for public use
 ## License
 MIT License
 
-Copyright (c) 2024 Zarah Malik, Weihao Li, Aahil Afraz, and Daniyal Amjed
+Copyright (c) 2024 Vladimir Agafonkin 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
